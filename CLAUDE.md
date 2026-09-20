@@ -58,13 +58,20 @@ pnpm typecheck
    the slug is a public URL. Either change is a migration — a managed 301
    (app `pnpm redirects`) plus a delete of the orphaned row — not a rename.
 
-6. **The `<h1>` check is not noise.** `sources/events.json` records each
+6. **The workspace slug is `irishsailing`, not `irish-sailing`.** The repo,
+   the series keys and the identity slugs all read `irish-sailing-…`; the
+   workspace this pushes to does not. Pushing to the wrong one fails with
+   `forbidden — workspace-not-a-member`, which looks like a bad token and is
+   not — it is the membership check in the app's `require-workspace.ts`
+   failing closed on a slug the key's user has no member row for.
+
+7. **The `<h1>` check is not noise.** `sources/events.json` records each
    page's title as captured, and `pnpm emit-as-published` fails when the
    capture no longer matches. A scorer re-publishing a page under a different
    title is a change to review, not one to absorb on the way past. Work out
    what changed before updating the recorded title.
 
-7. **Record judgement calls.** This corpus is small enough not to need a
+8. **Record judgement calls.** This corpus is small enough not to need a
    CLARIFICATIONS.md yet, but the moment a decision is made that the sources
    do not settle for themselves — which of two uploads is current, what an
    event is really called, whether two pages are one event — write it down,

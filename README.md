@@ -27,7 +27,7 @@ scripts/
 as-published.config.json     generated ingest config (committed; the input to
                              the app's `archive-generate`)
 .github/workflows/
-  as-published.yml           emit → generate → push to the irish-sailing workspace
+  as-published.yml           emit → generate → push to the irishsailing workspace
 ```
 
 ## Commands
@@ -58,7 +58,7 @@ pnpm capture && pnpm emit-as-published
    `irish-sailing-archive/series/<key>` and can never re-mint.
 3. **Ingest** — CI checks out the app repo, runs `pnpm archive-generate` over
    the config, and pushes with
-   `pnpm cli as-published push … --workspace irish-sailing`, authenticated by
+   `pnpm cli as-published push … --workspace irishsailing`, authenticated by
    a workspace- and capability-scoped archivist token. Ingest is idempotent —
    unchanged documents are no-ops by content hash — so a push that touches one
    capture re-publishes only what actually moved. Publishing is automatic;
@@ -97,14 +97,21 @@ delete of the orphaned row), not a rename.
 ## Status
 
 **One event ingested**, at
-`/p/irish-sailing/2025/junior-champions-cup` — the **2025 Junior Champions'
+`/p/irishsailing/2025/junior-champions-cup` — the **2025 Junior Champions'
 Cup**, 16 boats over 7 races including the medal race, published as one
 Overall fleet.
+
+Note the workspace slug is **`irishsailing`**, with no hyphen, while this
+repo and its series keys are `irish-sailing-…`. The slug is the `/p/` segment
+on every public URL; the keys are internal and seed the series ids. Pushing to
+the wrong one fails closed with `forbidden — workspace-not-a-member`, which
+reads like a credentials problem and isn't.
 
 - ✅ Capture, config and a clean `archive-generate`.
 - ✅ Accented Irish names survive ingest — the page is windows-1252, and the
    app decodes captures by their encoding.
-- ⬜ **Provision the `irish-sailing` workspace** and arm CI (both secrets).
+- ✅ The `irishsailing` workspace is provisioned and CI is armed, so a push
+   to `main` re-ingests.
 - ⬜ **The rest of the corpus.** Sailwave's root folder also holds the 2025
    Dinghy Champions' Cup (two pages) and the Youth Nationals for 2021 (six
    per-class pages, two of them near-duplicate uploads) and 2024. Each needs

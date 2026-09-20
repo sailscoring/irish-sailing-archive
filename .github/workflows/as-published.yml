@@ -16,7 +16,7 @@
 #
 # Secrets:
 #   APP_REPO_TOKEN              read access to sailscoring/sailscoring
-#   SAILSCORING_ARCHIVIST_TOKEN the irish-sailing workspace's archivist API
+#   SAILSCORING_ARCHIVIST_TOKEN the irishsailing workspace's archivist API
 #                               key (workspace- and capability-scoped: it can
 #                               only write as-published series)
 #
@@ -117,4 +117,4 @@ jobs:
       - name: Push to the workspace
         if: env.APP_REPO_TOKEN != '' && env.SAILSCORING_TOKEN != ''
         working-directory: sailscoring
-        run: pnpm cli as-published push ../irish-sailing-archive/as-published --workspace irish-sailing ${{ inputs.force && '--force' || '' }}
+        run: pnpm cli as-published push ../irish-sailing-archive/as-published --workspace irishsailing ${{ inputs.force && '--force' || '' }}

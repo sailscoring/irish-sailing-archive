@@ -10,7 +10,7 @@
  * Sailwave parser, so the config can never disagree with what gets ingested.
  *
  * URLs: the season is the published slug and the event sits under it —
- * `/p/irish-sailing/2025/junior-champions-cup`, with a further segment per
+ * `/p/irishsailing/2025/junior-champions-cup`, with a further segment per
  * fleet where an event scored more than one. Slugs are data, minted once in
  * `events.json` and never derived at ingest; series ids are UUIDv5 over
  * `irish-sailing-archive/series/<key>`, so regeneration updates rows in place
