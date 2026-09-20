@@ -3,6 +3,23 @@
   "out": "as-published",
   "series": [
     {
+      "key": "irish-sailing-2024-junior-champions-cup",
+      "id": "fa3100ba-36ea-5404-981c-fef0bf1fe338",
+      "publishedSlug": "2024",
+      "name": "Irish Sailing Junior Champions' Cup 2024",
+      "venue": "Fastnet Marine Outdoor & Education Centre",
+      "eventUrl": "https://www.sailing.ie/Racing/Events-Calendar/Junior-Champions-Cup",
+      "source": "sailwave",
+      "fleets": [
+        {
+          "name": "Overall",
+          "subPath": "junior-champions-cup",
+          "file": "sources/sailwave.com/results/ISjuniorchamps2024.htm",
+          "sectionTitle": "Overall"
+        }
+      ]
+    },
+    {
       "key": "irish-sailing-2025-junior-champions-cup",
       "id": "aed1c85c-c3bd-5b19-ba7d-4da8b94769d1",
       "publishedSlug": "2025",

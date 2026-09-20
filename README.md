@@ -14,6 +14,9 @@ follows the **as-published** model (app ADR-010,
 Sailing originally published are ingested and displayed faithfully —
 structured ranks plus verbatim display cells — and **never re-scored**.
 
+> 📋 **[CLARIFICATIONS.md](CLARIFICATIONS.md)** — the judgement calls the
+> corpus forced, and the open questions for Irish Sailing.
+
 ## What's here
 
 ```
@@ -96,10 +99,12 @@ delete of the orphaned row), not a rename.
 
 ## Status
 
-**One event ingested**, at
-`/p/irishsailing/2025/junior-champions-cup` — the **2025 Junior Champions'
-Cup**, 16 boats over 7 races including the medal race, published as one
-Overall fleet.
+**Two events ingested**, both the Junior Champions' Cup:
+
+| Season | Page | |
+|---|---|--:|
+| [2024](https://app.sailscoring.ie/p/irishsailing/2024/junior-champions-cup) | standings only, 8 races | 16 boats |
+| [2025](https://app.sailscoring.ie/p/irishsailing/2025/junior-champions-cup) | standings + 7 race tables incl. the medal race | 16 boats |
 
 Note the workspace slug is **`irishsailing`**, with no hyphen, while this
 repo and its series keys are `irish-sailing-…`. The slug is the `/p/` segment
@@ -108,18 +113,21 @@ the wrong one fails closed with `forbidden — workspace-not-a-member`, which
 reads like a credentials problem and isn't.
 
 - ✅ Capture, config and a clean `archive-generate`.
-- ✅ Accented Irish names survive ingest — the page is windows-1252, and the
-   app decodes captures by their encoding.
+- ✅ Accented Irish names survive ingest — the 2025 page is windows-1252, and
+   the app decodes captures by their encoding.
 - ✅ The `irishsailing` workspace is provisioned and CI is armed, so a push
    to `main` re-ingests.
-- ⬜ **The rest of the corpus.** Sailwave's root folder also holds the 2025
-   Dinghy Champions' Cup (two pages) and the Youth Nationals for 2021 (six
-   per-class pages, two of them near-duplicate uploads) and 2024. Each needs
-   a naming and a which-upload-is-current decision before it is listed.
-- ⬜ **No identity manifest yet.** With one event there is nothing to link
-   across, so the ingest's auto-pass drafts the competitor identities. A
-   curated manifest becomes worthwhile once the archive spans several events —
-   see `ksc-archive`'s `bootstrap-identities.ts` for the shape.
+- ⬜ **The rest of the corpus** — the 2025 Dinghy Champions' Cup and the 2021
+   and 2024 Youth Nationals are all in Sailwave's root folder. Each needs a
+   naming and a which-upload-is-current decision first; see
+   [CLARIFICATIONS.md](CLARIFICATIONS.md).
+- ⬜ **Event dates for 2024** — the page states none, so that season sorts
+   only by name on a sailor's timeline (CLARIFICATIONS §2).
+- ⬜ **No identity manifest yet.** The two events share four sailors by exact
+   name and five more by a near-miss spelling (CLARIFICATIONS §6), so the
+   ingest's auto-pass is now linking people unsupervised. A curated manifest
+   (`ksc-archive`'s `bootstrap-identities.ts` is the shape) is worth building
+   as soon as a third event lands.
 
 ## Relationship to the app repo
 

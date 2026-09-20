@@ -71,13 +71,14 @@ pnpm typecheck
    title is a change to review, not one to absorb on the way past. Work out
    what changed before updating the recorded title.
 
-8. **Record judgement calls.** This corpus is small enough not to need a
-   CLARIFICATIONS.md yet, but the moment a decision is made that the sources
-   do not settle for themselves — which of two uploads is current, what an
-   event is really called, whether two pages are one event — write it down,
-   in a `CLARIFICATIONS.md` if there are more than a couple. State what is
-   verified, mark what is inferred, and put the rest to Irish Sailing as a
-   question. Do not guess at intent.
+8. **Record every judgement call in [`CLARIFICATIONS.md`](CLARIFICATIONS.md).**
+   Two pages of the same event were enough to disagree about its name, its
+   venue and whether its results are final, so assume the next page will
+   disagree about something too. State what is verified, mark what is
+   inferred, and put the rest to Irish Sailing as a question. Do not guess at
+   intent — and in particular do not link two spellings into one sailor on a
+   hunch: over-linking puts one person's results in another's record, which is
+   worse than leaving them apart and far harder to notice.
 
 ## Relationship to the app repo
 
