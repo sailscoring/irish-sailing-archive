@@ -37,8 +37,11 @@ an event date** — they are when the scorer published. The event was sailed
 before them, by some margin nobody has stated. So the 2024 series carries no
 dates rather than a plausible invention.
 
-*Open question for Irish Sailing:* the 2024 dates. Without them that season
-sorts only by name on a sailor's timeline.
+*Open question for Irish Sailing:* the 2024 dates. This is not cosmetic —
+the public competitor index files sailors by season from the series' dates, so
+with none recorded its year filter offers **2025 only**, and the 2024 event is
+reachable there but not filterable. Every career arc shows `—` where its dates
+belong.
 
 ## 3. "Champions Cup" vs "Champions' Cup"
 
@@ -88,7 +91,7 @@ contrast, does publish its seven race tables, and those are carried.
 
 ## 6. Sailors spelled two ways across the two years
 
-**Recorded, not yet decided.** Sixteen boats sailed each year, and the second
+**Resolved.** Sixteen boats sailed each year, and the second
 event makes the archive cross-referential for the first time. Four people
 appear in both under an identical name:
 
@@ -109,19 +112,25 @@ And five pairs are near-misses the scorer spelled differently between years:
 | Ryan O Driscoll | Ryan O'Driscoll |
 | Caoilinn Geraghty-McDonnell | Caoilinn McDonnell |
 
-The first four look like one person each — same first name, same class and
-club, one event apart. The fifth is the least certain: a double-barrelled
-surname keeping only its second half.
+**All five pairs are confirmed as one sailor each**, and are merged in
+[`identity-curation.json`](identity-curation.json). Each shares a first name,
+a club and a class with its partner, and the slips are systematic rather than
+coincidental: the 2024 page drops the second *i* from both Copithornes and the
+apostrophe from O'Driscoll, so it is one scorer's spelling habit, not two
+families.
 
-**Nothing has been decided here.** With no identity manifest the ingest's
-auto-pass draws its own conclusions, and over-linking is the expensive
-mistake: it puts one sailor's results in another's record, which is worse
-than leaving two apart and far harder to notice. These are written down so a
-manifest, when there is one, starts from evidence rather than from the
-matcher's guesses.
+The four exact-name people needed no curation — the bootstrap treats one
+normalised name as one sailor, and `nameKey` already folds punctuation, so
+"Ryan O Driscoll" and "Ryan O'Driscoll" would have agreed even unmerged.
 
-*Open question for Irish Sailing:* the five pairs above — one sailor each, or
-two? The entry lists for both events would settle it.
+Display names follow the **most recently published spelling**, the scorer's
+latest word on it. One exception: Caoilinn's 2024 form is kept because it is
+strictly fuller — the 2025 page keeps only the second half of a
+double-barrelled surname, and dropping part of someone's name is a loss rather
+than a correction.
+
+*Still worth confirming:* which form Caoilinn Geraghty-McDonnell herself uses.
+That is the only display name here chosen against the most-recent rule.
 
 ## Still to decide
 

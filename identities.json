@@ -1,0 +1,687 @@
+{
+  "version": 1,
+  "series": {
+    "irish-sailing-2024-junior-champions-cup": "fa3100ba-36ea-5404-981c-fef0bf1fe338",
+    "irish-sailing-2025-junior-champions-cup": "aed1c85c-c3bd-5b19-ba7d-4da8b94769d1"
+  },
+  "identities": [
+    {
+      "slug": "abigail-murphy-xw3b",
+      "name": "Abigail Murphy",
+      "club": "RStGYC",
+      "members": [
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "10"
+        ]
+      ]
+    },
+    {
+      "slug": "adam-green-b5ca",
+      "name": "Adam Green",
+      "club": "Lough Erne YC",
+      "members": [
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "24"
+        ]
+      ]
+    },
+    {
+      "slug": "alex-eadie-ga9f",
+      "name": "Alex Eadie",
+      "club": "Donaghdee SC/Ballyholme YC",
+      "members": [
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "14"
+        ]
+      ]
+    },
+    {
+      "slug": "andrew-kingston-hcz4",
+      "name": "Andrew KIngston",
+      "club": "RCYC",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "7"
+        ]
+      ]
+    },
+    {
+      "slug": "andrew-o-neill-p779",
+      "name": "Andrew O Neill",
+      "club": "RCYC",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "7",
+          "crew"
+        ]
+      ]
+    },
+    {
+      "slug": "annabel-ridout-e5tw",
+      "name": "Annabel Ridout",
+      "club": "Ballyholme YC",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "18",
+          "crew"
+        ]
+      ]
+    },
+    {
+      "slug": "annelies-rooney-pf5z",
+      "name": "Annelies Rooney",
+      "club": "Sligo SC",
+      "members": [
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "18"
+        ]
+      ]
+    },
+    {
+      "slug": "bobby-driscoll-kvqg",
+      "name": "Bobby Driscoll",
+      "club": "Ballyholme YC/RNIYC",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "1"
+        ]
+      ]
+    },
+    {
+      "slug": "caoilinn-geraghty-mcdonnell-mkvb",
+      "name": "Caoilinn Geraghty-McDonnell",
+      "club": "RStGYC",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "16",
+          "crew"
+        ],
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "4"
+        ]
+      ],
+      "note": "Crewed for Riona McMorrow Moriarty in 2024, helmed in 2025. Confirmed one sailor. The 2024 form is kept as the display name because it is the fuller one — the 2025 page keeps only the second half of the surname. Worth confirming which the sailor uses."
+    },
+    {
+      "slug": "charlotte-crosbie-7vts",
+      "name": "Charlotte Crosbie",
+      "club": "RNIYC",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "5"
+        ]
+      ]
+    },
+    {
+      "slug": "cian-hanley-scxt",
+      "name": "Cian Hanley",
+      "club": "Greystones SC",
+      "members": [
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "23",
+          "crew"
+        ]
+      ]
+    },
+    {
+      "slug": "conor-cronin-kh9y",
+      "name": "Conor Cronin",
+      "club": "Ballyholme YC/RNIYC",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "1",
+          "crew"
+        ]
+      ]
+    },
+    {
+      "slug": "cora-naughton-zpy6",
+      "name": "Cora Naughton",
+      "club": "Blessington SC",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "8"
+        ],
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "15"
+        ]
+      ],
+      "note": "Blessington SC, 420, helming both years with Isha Duggan crewing both years. Confirmed one sailor."
+    },
+    {
+      "slug": "cormac-byrne-bve6",
+      "name": "Cormac Byrne",
+      "club": "Ballyholme YC",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "5",
+          "crew"
+        ],
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "11"
+        ]
+      ]
+    },
+    {
+      "slug": "daniel-copithorne-cswk",
+      "name": "Daniel Copithorne",
+      "club": "Schulll Harbour SC/RCYC",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "17"
+        ],
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "12"
+        ]
+      ],
+      "note": "Schull, helming both years. The 2024 page drops the second i; the same page drops it from Lucy Copithorne too, so it is one scorer's spelling, not two families. Confirmed one sailor."
+    },
+    {
+      "slug": "dara-jenkins-v43f",
+      "name": "Dara Jenkins",
+      "club": "Ballyholme YC",
+      "members": [
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "11",
+          "crew"
+        ]
+      ]
+    },
+    {
+      "slug": "david-evans-z7my",
+      "name": "David Evans",
+      "club": "Sligo YC",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "3"
+        ]
+      ]
+    },
+    {
+      "slug": "dylan-o-sullivan-tscd",
+      "name": "Dylan O'Sullivan",
+      "club": "Royal Cork YC",
+      "members": [
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "16"
+        ]
+      ]
+    },
+    {
+      "slug": "emily-donagh-w6wy",
+      "name": "Emily Donagh",
+      "club": "RStGYC/LDYC",
+      "members": [
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "22"
+        ]
+      ]
+    },
+    {
+      "slug": "emily-ridout-hrp8",
+      "name": "Emily Ridout",
+      "club": "Ballyholme YC",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "18"
+        ]
+      ]
+    },
+    {
+      "slug": "eoin-byrne-ute7",
+      "name": "Eoin Byrne",
+      "club": "National YC",
+      "members": [
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "13",
+          "crew"
+        ]
+      ]
+    },
+    {
+      "slug": "eolann-miles-6yz3",
+      "name": "Eolann Miles",
+      "club": "Malahide YC",
+      "members": [
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "20",
+          "crew"
+        ]
+      ]
+    },
+    {
+      "slug": "eva-ennis-47ky",
+      "name": "Eva Ennis",
+      "club": "HYC",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "14",
+          "crew"
+        ]
+      ]
+    },
+    {
+      "slug": "fionn-daly-wfq7",
+      "name": "Fionn Daly",
+      "club": "RCYC",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "11",
+          "crew"
+        ]
+      ]
+    },
+    {
+      "slug": "fionn-lynch-uhkr",
+      "name": "Fionn Lynch",
+      "club": "WHBTC/WSC",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "12",
+          "crew"
+        ]
+      ]
+    },
+    {
+      "slug": "gemma-brady-n5vr",
+      "name": "Gemma Brady",
+      "club": "RStGYC/LDYC",
+      "members": [
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "22",
+          "crew"
+        ]
+      ]
+    },
+    {
+      "slug": "grace-keating-dyzf",
+      "name": "Grace Keating",
+      "club": "RStGYC/LDYC",
+      "members": [
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "21",
+          "crew"
+        ]
+      ]
+    },
+    {
+      "slug": "hunter-reddy-jreu",
+      "name": "Hunter Reddy",
+      "club": "Ballyholme YC",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "9",
+          "crew"
+        ]
+      ]
+    },
+    {
+      "slug": "isha-duggan-kc98",
+      "name": "Isha Duggan",
+      "club": "Blessington SC",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "8",
+          "crew"
+        ],
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "15",
+          "crew"
+        ]
+      ]
+    },
+    {
+      "slug": "james-eadie-y5mj",
+      "name": "James Eadie",
+      "club": "Donaghdee SC/Ballyholme YC",
+      "members": [
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "14",
+          "crew"
+        ]
+      ]
+    },
+    {
+      "slug": "joseph-robinson-bk3k",
+      "name": "Joseph Robinson",
+      "club": "Ballyholme YC",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "9"
+        ]
+      ]
+    },
+    {
+      "slug": "juliet-ryan-pk26",
+      "name": "Juliet Ryan",
+      "club": "RStGYC",
+      "members": [
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "10",
+          "crew"
+        ]
+      ]
+    },
+    {
+      "slug": "kate-spain-kaay",
+      "name": "Kate Spain",
+      "club": "RSGYC & HYC",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "6"
+        ]
+      ]
+    },
+    {
+      "slug": "killian-power-eafn",
+      "name": "Killian Power",
+      "club": "RStGYC",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "17",
+          "crew"
+        ],
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "4",
+          "crew"
+        ]
+      ]
+    },
+    {
+      "slug": "lucy-copithorne-pchr",
+      "name": "Lucy Copithorne",
+      "club": "Schull Community College",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "13",
+          "crew"
+        ],
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "19",
+          "crew"
+        ]
+      ],
+      "note": "Schull, crewing for Ryan O'Driscoll both years. Same dropped i as Daniel Copithorne on the same page. Confirmed one sailor."
+    },
+    {
+      "slug": "lucy-coulter-uph8",
+      "name": "Lucy Coulter",
+      "club": "Sligo SC",
+      "members": [
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "18",
+          "crew"
+        ]
+      ]
+    },
+    {
+      "slug": "maeve-donagh-z53k",
+      "name": "Maeve Donagh",
+      "club": "RStGYC/LDYC",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "2"
+        ],
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "21"
+        ]
+      ]
+    },
+    {
+      "slug": "matt-maplebeck-tqgk",
+      "name": "Matt Maplebeck",
+      "club": "Schulll Harbour SC/RCYC",
+      "members": [
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "12",
+          "crew"
+        ]
+      ]
+    },
+    {
+      "slug": "max-cantwell-7urr",
+      "name": "Max Cantwell",
+      "club": "RSGYC",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "10",
+          "crew"
+        ]
+      ]
+    },
+    {
+      "slug": "max-sweetman-j54q",
+      "name": "Max Sweetman",
+      "club": "WHBTC/WSC",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "12"
+        ]
+      ]
+    },
+    {
+      "slug": "meadbh-butterly-apcs",
+      "name": "Meadbh Butterly",
+      "club": "Rush SC",
+      "members": [
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "17",
+          "crew"
+        ]
+      ]
+    },
+    {
+      "slug": "megan-o-sullivan-9fnq",
+      "name": "Megan O Sullivan",
+      "club": "RSGYC & HYC",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "6",
+          "crew"
+        ]
+      ]
+    },
+    {
+      "slug": "molly-hooper-jones-xrph",
+      "name": "Molly Hooper-Jones",
+      "club": "Lough Erne YC",
+      "members": [
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "24",
+          "crew"
+        ]
+      ]
+    },
+    {
+      "slug": "oisin-pierce-mh8x",
+      "name": "Oisin Pierce",
+      "club": "RCYC",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "11"
+        ]
+      ]
+    },
+    {
+      "slug": "peter-kenny-h8nx",
+      "name": "Peter Kenny",
+      "club": "RSGYC/LDYC",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "2",
+          "crew"
+        ]
+      ]
+    },
+    {
+      "slug": "peter-williams-qbts",
+      "name": "Peter Williams",
+      "club": "RSGYC",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "10"
+        ]
+      ]
+    },
+    {
+      "slug": "riaghan-boardman-jcd7",
+      "name": "Riaghan Boardman",
+      "club": "Rush SC",
+      "members": [
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "17"
+        ]
+      ]
+    },
+    {
+      "slug": "riona-mcmorrow-moriarty-jtv9",
+      "name": "Riona McMorrow Moriarty",
+      "club": "TBSC",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "16"
+        ]
+      ]
+    },
+    {
+      "slug": "rory-whyte-heja",
+      "name": "Rory Whyte",
+      "club": "Royal Cork YC",
+      "members": [
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "16",
+          "crew"
+        ]
+      ]
+    },
+    {
+      "slug": "ryan-o-driscoll-wcx3",
+      "name": "Ryan O'Driscoll",
+      "club": "Schull Community College",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "13"
+        ],
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "19"
+        ]
+      ],
+      "note": "Schull, helming both years with Lucy Copithorne crewing. The 2024 page drops the apostrophe. Confirmed one sailor."
+    },
+    {
+      "slug": "sean-hanley-w69x",
+      "name": "Sean Hanley",
+      "club": "Greystones SC",
+      "members": [
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "23"
+        ]
+      ]
+    },
+    {
+      "slug": "sienna-wright-atau",
+      "name": "Sienna Wright",
+      "club": "HYC",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "14"
+        ]
+      ]
+    },
+    {
+      "slug": "sinead-evans-cju5",
+      "name": "Sinead Evans",
+      "club": "Sligo YC",
+      "members": [
+        [
+          "irish-sailing-2024-junior-champions-cup",
+          "3",
+          "crew"
+        ]
+      ]
+    },
+    {
+      "slug": "siun-ui-choistealbha-fy6g",
+      "name": "Siún Uí Choistealbha",
+      "club": "Malahide YC",
+      "members": [
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "20"
+        ]
+      ]
+    },
+    {
+      "slug": "william-walsh-6dy7",
+      "name": "William Walsh",
+      "club": "National YC",
+      "members": [
+        [
+          "irish-sailing-2025-junior-champions-cup",
+          "13"
+        ]
+      ]
+    }
+  ]
+}

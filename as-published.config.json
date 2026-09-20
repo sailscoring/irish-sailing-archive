@@ -1,6 +1,7 @@
 {
   "version": 1,
   "out": "as-published",
+  "identities": "identities.json",
   "series": [
     {
       "key": "irish-sailing-2024-junior-champions-cup",

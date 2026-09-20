@@ -24,9 +24,12 @@ sources/
   events.json                the curated event list (the only hand-written input)
   sailwave.com/results/      captured Sailwave pages (verbatim)
 scripts/
-  events.ts                  the event list's shape, shared by both scripts
+  events.ts                  the event list's shape, shared by the scripts
   capture.ts                 refresh the capture      (`pnpm capture`)
   emit-as-published-config.ts events + captures → ingest config
+  bootstrap-identities.ts    rows → identities.json   (`pnpm identities`)
+identity-curation.json       hand-maintained input to `pnpm identities`
+identities.json              the competitor-identity manifest (committed)
 as-published.config.json     generated ingest config (committed; the input to
                              the app's `archive-generate`)
 .github/workflows/
@@ -40,15 +43,20 @@ pnpm install
 pnpm capture              # fetch every event listed in sources/events.json
 pnpm capture --refresh    # re-fetch, for an event still running
 pnpm emit-as-published    # events + captures → as-published.config.json
+pnpm identities           # generated documents → identities.json
 pnpm typecheck
 ```
 
-The full loop:
+The full loop, since `pnpm identities` reads what `archive-generate` writes:
 
 ```
 pnpm capture && pnpm emit-as-published
 (cd ../sailscoring && pnpm archive-generate ../irish-sailing-archive/as-published.config.json)
+pnpm identities
 ```
+
+Re-run the generate afterwards if the manifest changed — it copies
+`identities.json` alongside the series documents for the ingest to apply.
 
 ## The pipeline
 
@@ -59,7 +67,12 @@ pnpm capture && pnpm emit-as-published
    into `as-published.config.json`: one as-published series per event, one
    fleet per summary section on its page. Series ids are UUIDv5 over
    `irish-sailing-archive/series/<key>` and can never re-mint.
-3. **Ingest** — CI checks out the app repo, runs `pnpm archive-generate` over
+3. **Identities** — `pnpm identities` groups the generated rows into people
+   and writes `identities.json`, the manifest the ingest applies. It runs
+   against `archive-generate`'s output, so it is an operator step rather than
+   a CI one; slugs are minted once and never move, and a re-run only assigns
+   rows that aren't claimed yet.
+4. **Ingest** — CI checks out the app repo, runs `pnpm archive-generate` over
    the config, and pushes with
    `pnpm cli as-published push … --workspace irishsailing`, authenticated by
    a workspace- and capability-scoped archivist token. Ingest is idempotent —
@@ -123,11 +136,19 @@ reads like a credentials problem and isn't.
    [CLARIFICATIONS.md](CLARIFICATIONS.md).
 - ⬜ **Event dates for 2024** — the page states none, so that season sorts
    only by name on a sailor's timeline (CLARIFICATIONS §2).
-- ⬜ **No identity manifest yet.** The two events share four sailors by exact
-   name and five more by a near-miss spelling (CLARIFICATIONS §6), so the
-   ingest's auto-pass is now linking people unsupervised. A curated manifest
-   (`ksc-archive`'s `bootstrap-identities.ts` is the shape) is worth building
-   as soon as a third event lands.
+- ✅ **The identity manifest** — 64 rows resolved to **55 sailors**
+   (`identities.json`), every row manifest-pinned and nothing left to the
+   ingest's auto-pass. Nine appear in both events: four under an identical
+   name, five under a spelling the scorer varied between years, all confirmed
+   (CLARIFICATIONS §6).
+- ✅ **Crew count as sailors** (app
+   [#348](https://github.com/sailscoring/sailscoring/issues/348)) — every boat
+   here names a crew, so reading the helm field alone would have left half the
+   entrants out of the record. Caoilinn Geraghty-McDonnell crewed in 2024 and
+   helmed in 2025; that arc only exists because crew are people too.
+- ⬜ **Turn on `competitor-identity` for the workspace.** The manifest applies
+   regardless, but the public competitor index and the career arcs are gated
+   (`pnpm provision-org:prod enable-feature irishsailing competitor-identity`).
 
 ## Relationship to the app repo
 
@@ -145,7 +166,8 @@ validated config.
 
 - **Code** — `scripts/`: [MIT](LICENSE).
 - **Normalised data & docs** — `sources/events.json`,
-  `as-published.config.json`, `README.md`, `SOURCES.md`:
+  `as-published.config.json`, `identities.json`, `identity-curation.json`,
+  `README.md`, `SOURCES.md`, `CLARIFICATIONS.md`:
   [CC0 1.0](LICENSE-DATA). These are extractions of published facts (event
   names, dates, structure), and facts are not copyrightable.
 - **Source pages** — the verbatim captures under `sources/sailwave.com/`:

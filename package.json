@@ -6,7 +6,8 @@
   "scripts": {
     "capture": "tsx scripts/capture.ts",
     "emit-as-published": "tsx scripts/emit-as-published-config.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "identities": "tsx scripts/bootstrap-identities.ts"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",

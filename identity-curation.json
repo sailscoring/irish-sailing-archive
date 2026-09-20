@@ -1,0 +1,55 @@
+{
+  "_comment": [
+    "Hand-maintained input to `pnpm identities`. The bootstrap treats one",
+    "normalised name as one sailor by default (this corpus is small enough that",
+    "it holds); this file records the cross-spelling merges the matcher cannot",
+    "see, and the exceptions to that default. See CLARIFICATIONS.md §6.",
+    "",
+    "unify    - one sailor published under several spellings. `name` is the",
+    "           display name; `aliases` are the other spellings as published.",
+    "           A group with no aliases is a rename: it fixes a display name",
+    "           without changing which rows group together.",
+    "separate - a name that really is two different sailors, so the",
+    "           one-name-one-sailor default must not merge them.",
+    "",
+    "Display names follow the most recently published spelling, on the grounds",
+    "that it is the scorer's latest word on it — except where an earlier form is",
+    "strictly fuller, since dropping part of a double-barrelled surname is a",
+    "loss rather than a correction. Only Caoilinn Geraghty-McDonnell hits that",
+    "exception, and it is the one display choice still worth confirming.",
+    "",
+    "Do not add a merge on a hunch. Under-linking splits one sailor's record;",
+    "over-linking puts another sailor's results in it, which is the worse error",
+    "and the harder one to notice."
+  ],
+
+  "unify": [
+    {
+      "name": "Cora Naughton",
+      "aliases": ["Cora McNaughton"],
+      "note": "Blessington SC, 420, helming both years with Isha Duggan crewing both years. Confirmed one sailor."
+    },
+    {
+      "name": "Daniel Copithorne",
+      "aliases": ["Daniel Copthorne"],
+      "note": "Schull, helming both years. The 2024 page drops the second i; the same page drops it from Lucy Copithorne too, so it is one scorer's spelling, not two families. Confirmed one sailor."
+    },
+    {
+      "name": "Lucy Copithorne",
+      "aliases": ["Lucy Copthorne"],
+      "note": "Schull, crewing for Ryan O'Driscoll both years. Same dropped i as Daniel Copithorne on the same page. Confirmed one sailor."
+    },
+    {
+      "name": "Ryan O'Driscoll",
+      "aliases": ["Ryan O Driscoll"],
+      "note": "Schull, helming both years with Lucy Copithorne crewing. The 2024 page drops the apostrophe. Confirmed one sailor."
+    },
+    {
+      "name": "Caoilinn Geraghty-McDonnell",
+      "aliases": ["Caoilinn McDonnell"],
+      "note": "Crewed for Riona McMorrow Moriarty in 2024, helmed in 2025. Confirmed one sailor. The 2024 form is kept as the display name because it is the fuller one — the 2025 page keeps only the second half of the surname. Worth confirming which the sailor uses."
+    }
+  ],
+
+  "separate": []
+}
