@@ -1,0 +1,17 @@
+{
+  "events": [
+    {
+      "key": "irish-sailing-2025-junior-champions-cup",
+      "url": "https://www.sailwave.com/results/Irish%20Sailing%20Junior%20Champions'%20Cup%202025.htm",
+      "file": "Irish Sailing Junior Champions' Cup 2025.htm",
+      "season": "2025",
+      "slug": "junior-champions-cup",
+      "name": "Irish Sailing Junior Champions' Cup 2025",
+      "title": "Irish Sailing Junior Champions' Cup 20 - 21 September 2025",
+      "startDate": "2025-09-20",
+      "endDate": "2025-09-21",
+      "datesFrom": "the page's own <h1> — \"20 - 21 September 2025\"",
+      "eventUrl": "https://www.sailing.ie/Racing/Events-Calendar/Junior-Champions-Cup"
+    }
+  ]
+}

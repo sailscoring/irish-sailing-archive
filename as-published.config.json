@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "out": "as-published",
+  "series": [
+    {
+      "key": "irish-sailing-2025-junior-champions-cup",
+      "id": "aed1c85c-c3bd-5b19-ba7d-4da8b94769d1",
+      "publishedSlug": "2025",
+      "name": "Irish Sailing Junior Champions' Cup 2025",
+      "venue": "Fastnet Marine & Outdoor Education Centre, Schull, Co Cork",
+      "startDate": "2025-09-20",
+      "endDate": "2025-09-21",
+      "eventUrl": "https://www.sailing.ie/Racing/Events-Calendar/Junior-Champions-Cup",
+      "source": "sailwave",
+      "fleets": [
+        {
+          "name": "Overall",
+          "subPath": "junior-champions-cup",
+          "file": "sources/sailwave.com/results/Irish Sailing Junior Champions' Cup 2025.htm",
+          "sectionTitle": "Overall",
+          "includeRaces": true
+        }
+      ]
+    }
+  ]
+}
