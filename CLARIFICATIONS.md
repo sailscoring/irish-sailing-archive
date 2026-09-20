@@ -134,13 +134,58 @@ normalised name as one sailor, and `nameKey` already folds punctuation, so
 "Ryan O Driscoll" and "Ryan O'Driscoll" would have agreed even unmerged.
 
 Display names follow the **most recently published spelling**, the scorer's
-latest word on it. One exception: Caoilinn's 2024 form is kept because it is
-strictly fuller — the 2025 page keeps only the second half of a
-double-barrelled surname, and dropping part of someone's name is a loss rather
-than a correction.
+latest word on it, with two exceptions where that rule is wrong:
 
-*Still worth confirming:* which form Caoilinn Geraghty-McDonnell herself uses.
-That is the only display name here chosen against the most-recent rule.
+- **Cora McNaughton**, not Cora Naughton. The rule picked the 2025 spelling;
+  she is confirmed as McNaughton, and the 2025 page is the outlier — she is
+  McNaughton in 2024 and again in 2026. Her slug stays `cora-naughton-zpy6`:
+  a slug is a public URL and seeds the identity's UUIDv5, so it never moves
+  when a display name is corrected.
+- **Caoilinn Geraghty-McDonnell**, because the 2024 form is strictly fuller —
+  the 2025 page keeps only the second half of a double-barrelled surname, and
+  dropping part of someone's name is a loss rather than a correction.
+
+Cora is the useful lesson: the most-recent rule is a default for the
+unconfirmed, not evidence. A spelling anyone has actually confirmed beats it,
+and gets a note saying so.
+
+## 7. Duplicates across the archive and the live 2026 event
+
+**Where a correction belongs depends on which side of the line it is on**, and
+the line is real: the app enforces it.
+
+Irish Sailing scores the 2026 Junior Champions' Cup *in* Sail Scoring, so that
+series is a live series in the same workspace as this archive. Its competitor
+identities are drawn by the app's automatic pass, not by this repo's manifest.
+The pass joins a 2026 sailor to an archive identity only when something
+corroborates the name — sail number, age, or club — and this event has no
+ages, recycles its sail numbers as tally letters and numbers each year, and
+writes clubs many ways. So a recurring sailor whose club string moved gets a
+second identity.
+
+Five pairs came out of the 2026 event:
+
+| archive identity (this repo) | live 2026 identity (the app) |
+|---|---|
+| `cora-naughton-zpy6` | `cora-mcnaughton-…` |
+| `kate-spain-kaay` | `kate-spain-…` |
+| `matt-maplebeck-tqgk` | `matt-mapplebeck-…` |
+| `molly-hooper-jones-xrph` | `mollie-hooper-jones-…` |
+| `riona-mcmorrow-moriarty-jtv9` | `riona-mcmorrowmoriaty-…` |
+
+**Merging them is the app's job, not this repo's.** The manifest addresses
+rows by `(series-key, sail, slot)` and only knows this archive's series; it
+cannot claim a row in a live series. The merge happens in the workspace's
+Competitors tab.
+
+**The archive identity always survives**, and the app enforces it — dissolving
+an archive-managed identity is refused with `archive-managed`, because the
+next ingest would recreate it from the manifest and quietly undo the merge.
+So the live identity merges *into* the archive one, and the surviving page
+keeps the archive slug and the display name this repo sets.
+
+Which means a display name on a merged identity is still corrected **here**,
+in `identity-curation.json` — not in the app.
 
 ## Still to decide
 

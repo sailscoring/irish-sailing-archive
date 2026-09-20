@@ -209,8 +209,9 @@ function main(): void {
     groups.set(groupKey, [...(groups.get(groupKey) ?? []), row]);
   });
 
-  // Existing curation wins: an identity keeps the slug it was minted under,
-  // because that slug is a public URL and seeds the identity's UUIDv5.
+  // The previous run supplies slugs only: an identity keeps the slug it was
+  // minted under, because that slug is a public URL and seeds the identity's
+  // UUIDv5. Nothing else is inherited — see the note at the push below.
   const existing: { identities?: ManifestIdentity[] } = existsSync(OUT)
     ? JSON.parse(readFileSync(OUT, 'utf8'))
     : {};
@@ -241,13 +242,16 @@ function main(): void {
       .find((s): s is string => !!s && !inherited.has(s));
     if (priorSlug) inherited.add(priorSlug);
 
+    // The previous run's file contributes the **slug and nothing else**. Name,
+    // club and note are derived from the curation and the rows every time, so
+    // a curated rename actually lands — `identities.json` is generated, and an
+    // earlier run's display name is not evidence about anything.
     const slug = priorSlug ?? mintSlug(name, members.map(memberKey).join('|'), takenSlugs);
-    const prior = priorSlug ? priorBySlug.get(priorSlug) : undefined;
-    const note = noteFor.get(groupKey) ?? prior?.note;
+    const note = noteFor.get(groupKey);
     identities.push({
       slug,
-      name: prior?.name ?? name,
-      ...(latest.club ? { club: prior?.club ?? latest.club } : {}),
+      name,
+      ...(latest.club ? { club: latest.club } : {}),
       members,
       ...(note ? { note } : {}),
     });

@@ -152,6 +152,24 @@ reads like a credentials problem and isn't.
    regardless, but the public competitor index and the career arcs are gated
    (`pnpm provision-org:prod enable-feature irishsailing competitor-identity`).
 
+## The live 2026 event
+
+Irish Sailing scores the 2026 Junior Champions' Cup *in* Sail Scoring, so the
+`irishsailing` workspace holds a live series alongside this archive. The two
+share sailors, and the app's automatic identity pass — not this repo's
+manifest — decides whether a 2026 entry joins an archived one.
+
+Corrections split along that line, and the app enforces the split:
+
+- **A duplicate identity spanning both** is merged in the workspace's
+  Competitors tab. The archive identity always survives; dissolving one is
+  refused with `archive-managed`, because the next ingest would recreate it.
+- **The display name on the surviving identity** is corrected *here*, in
+  `identity-curation.json`, because it comes from the manifest.
+
+See [CLARIFICATIONS §7](CLARIFICATIONS.md) for the five pairs the 2026 event
+produced and why the matcher missed them.
+
 ## Relationship to the app repo
 
 This repo assumes the sibling app checkout exists at `../sailscoring`. It
