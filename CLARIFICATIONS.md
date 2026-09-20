@@ -24,24 +24,34 @@ it is ingested as it stands rather than held back.
 anywhere? If so it supersedes this page, and this archive should carry that
 one instead.
 
-## 2. The 2024 page states no event dates
+## 2. The 2024 dates come from the Sailing Instructions, not the results page
 
-**Verified absent.** The 2025 event carries its dates in its own `<h1>`
-("20 - 21 September 2025"), so they are recorded with a `datesFrom` note.
-The 2024 page states none anywhere: not in the `<h1>`, not in the `<h2>`, not
-in the `<title>`.
+**Verified, from a second published source.** The 2025 event carries its dates
+in its own `<h1>` ("20 - 21 September 2025"). The 2024 page states none
+anywhere — not in the `<h1>`, not in the `<h2>`, not in the `<title>`.
 
-The Sailwave folder listing gives the file an upload time of
-2024-09-22 16:01, and the page stamps itself 18:08 the same day. **Neither is
-an event date** — they are when the scorer published. The event was sailed
-before them, by some margin nobody has stated. So the 2024 series carries no
-dates rather than a plausible invention.
+They are recorded from **Irish Sailing's own Sailing Instructions** for the
+event, which head their first page:
 
-*Open question for Irish Sailing:* the 2024 dates. This is not cosmetic —
-the public competitor index files sailors by season from the series' dates, so
-with none recorded its year filter offers **2025 only**, and the 2024 event is
-reachable there but not filterable. Every career arc shows `—` where its dates
-belong.
+> Fastnet Marine Outdoor & Education Centre, Schull Harbour, Co. Cork
+> Saturday 21st & 22nd September 2024
+
+([2024 SIs](https://www.sailing.ie/Portals/0/2024%20SIs%20-%20Irish%20Sailing%20Junior%20Champions%20Cup%202024.pdf),
+sailing.ie.) That is the organising authority stating its own event dates, so
+it outranks anything that could be inferred from the capture. The SI wording
+is slightly off — "Saturday 21st & 22nd" names the weekday of the first day
+only — but 21 September 2024 was indeed a Saturday and the 22nd the Sunday,
+and Irish Sailing's report of the event describes racing on both days.
+
+**Not** the upload timestamp. The Sailwave folder gives the file
+2024-09-22 16:01 and the page stamps itself 18:08 the same day; those are when
+the scorer published, which happens to fall on the second day but states
+nothing about the first. An event whose publication ran a week late would have
+been filed a week wrong.
+
+Why it mattered: the public competitor index files sailors by season from the
+series' dates, so while 2024 had none its year filter offered 2025 only, and
+every career arc showed `—` where the 2024 dates belong.
 
 ## 3. "Champions Cup" vs "Champions' Cup"
 

@@ -134,8 +134,10 @@ reads like a credentials problem and isn't.
    and 2024 Youth Nationals are all in Sailwave's root folder. Each needs a
    naming and a which-upload-is-current decision first; see
    [CLARIFICATIONS.md](CLARIFICATIONS.md).
-- ⬜ **Event dates for 2024** — the page states none, so that season sorts
-   only by name on a sailor's timeline (CLARIFICATIONS §2).
+- ✅ **Event dates for both seasons.** 2025 states its own in the capture;
+   2024 states none anywhere, and is dated from Irish Sailing's Sailing
+   Instructions for the event (CLARIFICATIONS §2) — a published source, not
+   the upload timestamp.
 - ✅ **The identity manifest** — 64 rows resolved to **55 sailors**
    (`identities.json`), every row manifest-pinned and nothing left to the
    ingest's auto-pass. Nine appear in both events: four under an identical

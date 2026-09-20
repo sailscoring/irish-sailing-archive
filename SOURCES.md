@@ -42,9 +42,28 @@ Notes on the format:
 ## What the event list adds
 
 `sources/events.json` holds only what the page cannot state for itself: the
-season folder, the event slug, the display name, and the dates with a note
-saying which published text they were read from. The fleets, the race tables
-and the venue are read off the capture.
+season folder, the event slug, the display name, and the dates. The fleets,
+the race tables and the venue are read off the capture.
+
+Every date carries a `datesFrom` note naming the published text it was read
+from, because the two events state theirs in different places — 2025 in its
+own `<h1>`, 2024 nowhere at all. A date with no such source does not go in.
+
+## `sailing.ie` — what the results page leaves out
+
+<https://www.sailing.ie/Racing/Events-Calendar/Junior-Champions-Cup>
+
+Irish Sailing's own site is the second source, consulted rather than captured:
+it is where the event lives, and it carries the Notice of Race, the Sailing
+Instructions and the entry lists that the Sailwave page does not.
+
+So far it has supplied one fact — the 2024 event dates, from that year's
+[Sailing Instructions](https://www.sailing.ie/Portals/0/2024%20SIs%20-%20Irish%20Sailing%20Junior%20Champions%20Cup%202024.pdf)
+(CLARIFICATIONS §2). Nothing from it is mirrored under `sources/`: it is a
+living site rather than a frozen results file, and a stale copy of a page that
+still exists would be worse than a citation. Anything taken from it is
+recorded in `events.json` with a `datesFrom`-style note saying where it came
+from.
 
 It also records each page's `<h1>` as captured. `pnpm emit-as-published`
 checks it and fails if it has moved — a re-published page is a change to
