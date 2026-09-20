@@ -33,6 +33,12 @@ async function main(): Promise<void> {
 
   let fetched = 0;
   for (const event of events) {
+    // A transcribed event has no results page to fetch: its `file` is built
+    // by `pnpm transcriptions` from a photograph already kept under sources/.
+    if (event.transcribed) {
+      console.log(`  ~ ${event.key} (transcribed, nothing to fetch)`);
+      continue;
+    }
     const path = join(CAPTURE_DIR, event.file);
     if (!refresh && existsSync(path)) {
       console.log(`  = ${event.file}`);

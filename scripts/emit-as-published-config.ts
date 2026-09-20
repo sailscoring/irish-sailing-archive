@@ -63,15 +63,21 @@ function venueOf(subtitle: string | null): string | undefined {
 }
 
 function buildSeries(event: ArchiveEvent) {
-  const path = join(CAPTURE_DIR, event.file);
+  // A transcribed event's file is generated into the repo, not captured from
+  // a publisher, so it is addressed from the repo root rather than the capture
+  // directory.
+  const path = event.transcribed ? event.file : join(CAPTURE_DIR, event.file);
   const { text } = decodeCapture(readFileSync(path));
   const page = parseSailwaveHtml(text);
 
   // The curated name is a display decision, but the `<h1>` is the evidence it
   // was made from. A re-capture that moves it means the scorer re-published
   // something different, and that is a review, not a silent re-emit.
+  // A transcription's `<h1>` is our own text, so it proves nothing about a
+  // publisher and the check does not apply; the arithmetic check in
+  // `pnpm transcriptions` is what guards those rows instead.
   const title = page.title?.replace(/\s+/g, ' ').trim() ?? '';
-  if (title !== event.title) {
+  if (!event.transcribed && title !== event.title) {
     throw new Error(
       `${event.file}: the page's <h1> is now "${title}", but events.json ` +
         `records "${event.title}". Check what changed, then update ` +
@@ -90,7 +96,7 @@ function buildSeries(event: ArchiveEvent) {
     return {
       name,
       subPath: multi ? `${event.slug}/${slug(name)}` : event.slug,
-      file: `${CAPTURE_DIR}/${event.file}`,
+      file: event.transcribed ? event.file : `${CAPTURE_DIR}/${event.file}`,
       // Only disambiguate where there is something to disambiguate; a
       // single untitled section has no title to match on.
       ...(summary.title ? { sectionTitle: summary.title } : {}),

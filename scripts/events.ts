@@ -21,10 +21,18 @@ export interface ArchiveEvent {
    *  permanent: renaming one re-mints the id and orphans the ingested
    *  series. */
   key: string;
-  /** The published page, as linked from the Sailwave results folder. */
+  /** Where the result was published. Normally the Sailwave page; for a
+   *  transcribed event, the article carrying the photograph it was read from. */
   url: string;
-  /** The capture's filename under `CAPTURE_DIR`, verbatim from the URL. */
+  /** Normally the capture's filename under `CAPTURE_DIR`, verbatim from the
+   *  URL. For a transcribed event, a path from the repo root. */
   file: string;
+  /** This event was never published as a results page, and its standings were
+   *  read by hand off a photograph (`pnpm transcriptions`). `file` is then the
+   *  generated HTML rather than a capture, `pnpm capture` skips it, and the
+   *  `title` check does not apply — the title is ours, not a publisher's.
+   *  See CLARIFICATIONS.md §8. */
+  transcribed?: boolean;
   /** The published slug's season folder (app ADR-011). */
   season: string;
   /** The event's slug within its season. Public URL; never changed. */

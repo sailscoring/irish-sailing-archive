@@ -69,6 +69,19 @@ It also records each page's `<h1>` as captured. `pnpm emit-as-published`
 checks it and fails if it has moved — a re-published page is a change to
 review, not one to absorb on the way past.
 
+## `afloat.ie` — where a result exists only as a picture
+
+The 2023 Junior Champions' Cup was never published as a results page. Its
+standings survive as a photograph of the scorer's table in afloat.ie's report
+of the event, captured verbatim at
+`sources/afloat.ie/I0000s1kApQNMtEA.jpg`.
+
+That image cannot be parsed, so the figures were read by hand into
+`transcriptions/` and rendered into the Sailwave shape — the only entry in
+this archive whose numbers were typed rather than captured. It is marked as
+such wherever it appears, and CLARIFICATIONS §8 says what that costs and how
+the arithmetic check limits the damage.
+
 ## Capture etiquette
 
 sailwave.com is a small public server. `pnpm capture` is single-threaded with

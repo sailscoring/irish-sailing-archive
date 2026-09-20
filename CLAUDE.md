@@ -25,6 +25,7 @@ repo under `../sailscoring/docs/`.
 pnpm install
 pnpm capture              # fetch every event in sources/events.json
 pnpm capture --refresh    # re-fetch everything
+pnpm transcriptions       # hand-read tables → Sailwave-shaped HTML
 pnpm emit-as-published    # events + captures → as-published.config.json
 pnpm identities           # generated documents → identities.json
 pnpm typecheck
@@ -45,8 +46,15 @@ The README has it in full.
    reproducibility. Do not edit it, do not transcode it (see rule 4), and do
    not relicense it — see README "Licensing".
 
-3. **Only real published data.** If something is missing, leave it missing —
-   do not fabricate, interpolate, or guess. An event with no stated venue
+3. **Only real published data, and transcribe only as a last resort.** If
+   something is missing, leave it missing — do not fabricate, interpolate, or
+   guess. One event (2023) was never published as a page at all and had to be
+   read by hand off a photograph; that is the exception, it lives in
+   `transcriptions/` rather than `sources/`, and `pnpm transcriptions` proves
+   every row against its own published Total and Nett before writing anything.
+   Never hand-type figures that cannot be checked that way, and never edit a
+   figure to make a sum come out — a row that will not reconcile means the
+   reading or the source is wrong, which is a finding, not a number to adjust. An event with no stated venue
    gets no venue. Dates carry a `datesFrom` note saying which published text
    they were read from; a date with no such source does not go in.
 

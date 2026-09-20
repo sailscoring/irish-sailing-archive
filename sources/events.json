@@ -1,6 +1,18 @@
 {
   "events": [
     {
+      "key": "irish-sailing-2023-junior-champions-cup",
+      "transcribed": true,
+      "url": "https://afloat.ie/sail/youth-sailing/item/61117-russell-bolger-of-dun-laoghaire-clear-winner-at-junior-national-championship-at-schull",
+      "file": "transcriptions/2023-junior-champions-cup.html",
+      "season": "2023",
+      "slug": "junior-champions-cup",
+      "name": "Irish Sailing Junior Champions' Cup 2023",
+      "title": "Irish Sailing Junior Champions Cup 2023",
+      "datesFrom": "not stated — afloat.ie reports the postponed championship was sailed early in a TR 3.6 week that ended Friday 3 November 2023, which does not fix the racing days",
+      "eventUrl": "https://www.sailing.ie/Racing/Events-Calendar/Junior-Champions-Cup"
+    },
+    {
       "key": "irish-sailing-2024-junior-champions-cup",
       "url": "https://www.sailwave.com/results/ISjuniorchamps2024.htm",
       "file": "ISjuniorchamps2024.htm",

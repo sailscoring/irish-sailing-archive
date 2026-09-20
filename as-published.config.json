@@ -4,6 +4,23 @@
   "identities": "identities.json",
   "series": [
     {
+      "key": "irish-sailing-2023-junior-champions-cup",
+      "id": "7b553857-88a6-59cb-8c41-56ef8afdb602",
+      "publishedSlug": "2023",
+      "name": "Irish Sailing Junior Champions' Cup 2023",
+      "venue": "Fastnet Marine & Outdoor Education Centre, Schull, Co Cork",
+      "eventUrl": "https://www.sailing.ie/Racing/Events-Calendar/Junior-Champions-Cup",
+      "source": "sailwave",
+      "fleets": [
+        {
+          "name": "Overall",
+          "subPath": "junior-champions-cup",
+          "file": "transcriptions/2023-junior-champions-cup.html",
+          "sectionTitle": "Overall"
+        }
+      ]
+    },
+    {
       "key": "irish-sailing-2024-junior-champions-cup",
       "id": "fa3100ba-36ea-5404-981c-fef0bf1fe338",
       "publishedSlug": "2024",

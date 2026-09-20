@@ -23,9 +23,13 @@ structured ranks plus verbatim display cells — and **never re-scored**.
 sources/
   events.json                the curated event list (the only hand-written input)
   sailwave.com/results/      captured Sailwave pages (verbatim)
+  afloat.ie/                 a published results photograph (verbatim)
+transcriptions/              hand-read tables for results nobody published as
+                             a page, plus the HTML built from them (§8)
 scripts/
   events.ts                  the event list's shape, shared by the scripts
   capture.ts                 refresh the capture      (`pnpm capture`)
+  build-transcriptions.ts    transcription → HTML     (`pnpm transcriptions`)
   emit-as-published-config.ts events + captures → ingest config
   bootstrap-identities.ts    rows → identities.json   (`pnpm identities`)
 identity-curation.json       hand-maintained input to `pnpm identities`
@@ -42,6 +46,7 @@ as-published.config.json     generated ingest config (committed; the input to
 pnpm install
 pnpm capture              # fetch every event listed in sources/events.json
 pnpm capture --refresh    # re-fetch, for an event still running
+pnpm transcriptions       # hand-read tables → Sailwave-shaped HTML
 pnpm emit-as-published    # events + captures → as-published.config.json
 pnpm identities           # generated documents → identities.json
 pnpm typecheck
@@ -50,7 +55,7 @@ pnpm typecheck
 The full loop, since `pnpm identities` reads what `archive-generate` writes:
 
 ```
-pnpm capture && pnpm emit-as-published
+pnpm capture && pnpm transcriptions && pnpm emit-as-published
 (cd ../sailscoring && pnpm archive-generate ../irish-sailing-archive/as-published.config.json)
 pnpm identities
 ```
@@ -112,12 +117,13 @@ delete of the orphaned row), not a rename.
 
 ## Status
 
-**Two events ingested**, both the Junior Champions' Cup:
+**Three events ingested**, all the Junior Champions' Cup:
 
-| Season | Page | |
+| Season | Source | |
 |---|---|--:|
-| [2024](https://app.sailscoring.ie/p/irishsailing/2024/junior-champions-cup) | standings only, 8 races | 16 boats |
-| [2025](https://app.sailscoring.ie/p/irishsailing/2025/junior-champions-cup) | standings + 7 race tables incl. the medal race | 16 boats |
+| [2023](https://app.sailscoring.ie/p/irishsailing/2023/junior-champions-cup) | **transcribed** from a published photograph (§8) | 15 boats, 9 races |
+| [2024](https://app.sailscoring.ie/p/irishsailing/2024/junior-champions-cup) | Sailwave capture, standings only | 16 boats, 8 races |
+| [2025](https://app.sailscoring.ie/p/irishsailing/2025/junior-champions-cup) | Sailwave capture, with race tables | 16 boats, 7 races |
 
 Note the workspace slug is **`irishsailing`**, with no hyphen, while this
 repo and its series keys are `irish-sailing-…`. The slug is the `/p/` segment
@@ -130,27 +136,24 @@ reads like a credentials problem and isn't.
    the app decodes captures by their encoding.
 - ✅ The `irishsailing` workspace is provisioned and CI is armed, so a push
    to `main` re-ingests.
-- ⬜ **The rest of the corpus** — the 2025 Dinghy Champions' Cup and the 2021
-   and 2024 Youth Nationals are all in Sailwave's root folder. Each needs a
-   naming and a which-upload-is-current decision first; see
-   [CLARIFICATIONS.md](CLARIFICATIONS.md).
-- ✅ **Event dates for both seasons.** 2025 states its own in the capture;
-   2024 states none anywhere, and is dated from Irish Sailing's Sailing
-   Instructions for the event (CLARIFICATIONS §2) — a published source, not
-   the upload timestamp.
-- ✅ **The identity manifest** — 64 rows resolved to **55 sailors**
-   (`identities.json`), every row manifest-pinned and nothing left to the
-   ingest's auto-pass. Nine appear in both events: four under an identical
-   name, five under a spelling the scorer varied between years, all confirmed
-   (CLARIFICATIONS §6).
+- ✅ **Event dates for 2024 and 2025.** 2025 states its own in the capture;
+   2024 is dated from Irish Sailing's Sailing Instructions (CLARIFICATIONS §2).
+   2023 has none — nobody published them.
+- ✅ **The identity manifest** — 94 rows resolved to **77 sailors**, every row
+   manifest-pinned and nothing left to the ingest's auto-pass. Fifteen appear
+   in more than one event.
 - ✅ **Crew count as sailors** (app
    [#348](https://github.com/sailscoring/sailscoring/issues/348)) — every boat
-   here names a crew, so reading the helm field alone would have left half the
-   entrants out of the record. Caoilinn Geraghty-McDonnell crewed in 2024 and
-   helmed in 2025; that arc only exists because crew are people too.
-- ⬜ **Turn on `competitor-identity` for the workspace.** The manifest applies
-   regardless, but the public competitor index and the career arcs are gated
-   (`pnpm provision-org:prod enable-feature irishsailing competitor-identity`).
+   in all three events names a crew, so reading the helm field alone would
+   have left half the entrants out of the record.
+- ⬜ **Ask for the real 2023 file.** 2024 and 2025 were both published to
+   sailwave.com by the same operation, so a `.blw` or unpublished HTML for
+   2023 very likely exists. It would retire the transcription (§8).
+- ⬜ **The 2023 page cannot say it is a transcription.** As-published ingest
+   documents carry no note field, so it renders like the captures beside it.
+- ⬜ **The rest of the corpus** — the 2025 Dinghy Champions' Cup and the 2021
+   and 2024 Youth Nationals are in Sailwave's root folder, each needing a
+   naming and a which-upload-is-current decision first.
 
 ## The live 2026 event
 

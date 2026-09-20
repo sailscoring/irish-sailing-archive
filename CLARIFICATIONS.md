@@ -187,6 +187,86 @@ keeps the archive slug and the display name this repo sets.
 Which means a display name on a merged identity is still corrected **here**,
 in `identity-curation.json` — not in the app.
 
+## 8. The 2023 result is a transcription, not a capture
+
+**This is the one series here that nobody published as a results page**, and
+the only entry in this archive whose figures were typed rather than parsed.
+It is flagged that way everywhere it appears, and it should stay flagged.
+
+The 2023 Junior Champions' Cup was postponed and finally sailed at Schull in
+a TR 3.6 week that ended Friday 3 November 2023. No Sailwave page for it
+exists — not under any name, in any of the 11,688 files in Sailwave's root
+results folder. The only published form of the standings is a **photograph of
+the scorer's table** in afloat.ie's report of the event
+([WM Nixon, 5 November 2023](https://afloat.ie/sail/youth-sailing/item/61117-russell-bolger-of-dun-laoghaire-clear-winner-at-junior-national-championship-at-schull)).
+That image is kept verbatim at `sources/afloat.ie/I0000s1kApQNMtEA.jpg`.
+
+So the fifteen rows in `transcriptions/2023-junior-champions-cup.json` were
+read off a 767-pixel JPEG by eye, and `pnpm transcriptions` renders them into
+the Sailwave shape the app's parser reads.
+
+**What makes that defensible is that the table checks itself.** A standings
+table carries its own checksum: every row's race cells must sum to its
+published Total, and Total less the parenthesised discard must equal its
+published Nett. A single misread digit breaks both. The build verifies all
+fifteen rows before writing anything and fails if one does not reconcile, so
+a transcription that cannot be proved right never reaches a results page.
+This is not theoretical — a first reading of the low-resolution image had
+four sail numbers wrong, and the sums are what caught them.
+
+What the check cannot verify is the text: names, clubs and classes have no
+arithmetic. Those were read from a 3× upscale, and a misspelling there would
+be invisible.
+
+Consequences, all deliberate:
+
+- The generated HTML lives in `transcriptions/`, **not** `sources/`, carries a
+  comment saying it is generated, and is never described as a capture.
+- `pnpm capture` skips the event — there is nothing to fetch.
+- The `<h1>` check (§ the emit script) does not apply: the title in that file
+  is ours, so it could only ever agree with itself.
+- The event carries **no dates**. The article fixes the end of the week, not
+  the days raced, and the SIs for 2023 are not online. Same rule as everywhere
+  else: a date nobody published does not go in.
+
+**Open:** ask Irish Sailing, or the Schull scorer, for the original. 2024 and
+2025 were both published to sailwave.com by the same operation, so a `.blw` or
+an unpublished HTML for 2023 very likely exists — the event was postponed to
+November and probably scored without ever being uploaded. A real capture would
+retire this whole apparatus for 2023, and it is one email.
+
+**Also open:** the published page does not say any of this. As-published
+ingest documents carry no note field, so `/p/irishsailing/2023/...` renders
+looking exactly like the two verbatim captures beside it. That is the wrong
+way round — a transcription should say what it is, and link to the photograph
+it came from. Filed as app
+[#628](https://github.com/sailscoring/sailscoring/issues/628); when it lands,
+this series gets a `seriesNote` saying so.
+
+## 9. What 2023 settled about names
+
+Adding a third season turned three previously-unconfirmed spellings into
+evidence, and caught two display names that the most-recent-spelling rule had
+got wrong:
+
+| | published as | display name |
+|---|---|---|
+| Cora McNaughton | McNaughton in 2023, 2024, 2026; Naughton in 2025 | **McNaughton** — three sources to one |
+| Caoilinn Geraghty-McDonnell | full surname in 2023 and 2024; short in 2025 | **the full form** — two to one |
+| Riona McMorrow Moriarty | McMorrow Moriarty in 2023 and 2024; McMorrowMoriaty in the live 2026 event | **McMorrow Moriarty** |
+| Andrew Kingston | `Andrew KIngston` in 2024 (capital i); correct in 2023 | **Kingston** |
+| Megan O'Sullivan | no apostrophe in 2024; apostrophe in 2023 | **O'Sullivan** |
+
+The last two are new, and they are not judgement calls: one page has a typo
+and another does not. Both had been sitting in the manifest as the 2024
+spelling because it was the most recent one, which is the rule doing exactly
+what it is supposed to do in the absence of evidence and exactly the wrong
+thing once evidence exists.
+
+None of the five changed a slug. A slug is a public URL and seeds the
+identity's UUIDv5, so it never moves when a display name is corrected — which
+is why `cora-naughton-zpy6` is the URL of a page headed *Cora McNaughton*.
+
 ## Still to decide
 
 Events in Sailwave's root folder that are Irish Sailing's but not yet listed
