@@ -4,6 +4,25 @@
   "identities": "identities.json",
   "series": [
     {
+      "key": "irish-sailing-2021-all-ireland-junior-championships",
+      "id": "7a36c59f-f71a-505c-b5f0-2dc0a8a11fdf",
+      "publishedSlug": "2021",
+      "name": "Irish Sailing All Ireland Junior Championships 2021",
+      "venue": "Fastnet Marine and Outdoor Education Centre, Schull, Co Cork",
+      "startDate": "2021-09-25",
+      "endDate": "2021-09-26",
+      "eventUrl": "https://www.sailing.ie/Racing/Events-Calendar/Junior-Champions-Cup",
+      "source": "sailwave",
+      "fleets": [
+        {
+          "name": "Overall",
+          "subPath": "all-ireland-junior-championships",
+          "file": "transcriptions/2021-all-ireland-junior-championships.html",
+          "sectionTitle": "Overall"
+        }
+      ]
+    },
+    {
       "key": "irish-sailing-2023-junior-champions-cup",
       "id": "7b553857-88a6-59cb-8c41-56ef8afdb602",
       "publishedSlug": "2023",

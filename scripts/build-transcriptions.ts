@@ -26,14 +26,30 @@ import { basename, join } from 'node:path';
 const DIR = 'transcriptions';
 
 interface Transcription {
-  source: { image: string; imageUrl: string; article: string; articleTitle: string; publisher: string };
+  source: {
+    capture: string;
+    url: string;
+    publisher: string;
+    /** How the figures got here: read by eye off an image, or extracted from
+     *  the text of a captured page. Only the first can misread a digit. */
+    reading: 'hand-read' | 'extracted';
+  };
   title: string;
   venue: string;
   sectionTitle: string;
   caption: string;
+  /** The published table had a rank column. When false, rows begin at the
+   *  first lead column and the page publishes no places — which the app
+   *  already understands (a section may legitimately rank nobody). */
+  ranked: boolean;
   leadColumns: Array<{ key: string; label: string }>;
   raceHeaders: string[];
   rows: string[][];
+  /** Rows whose own published figures contradict each other. Each must be
+   *  declared with the numbers, so the check still catches a misreading while
+   *  letting a *source* error through verbatim — which is the whole point of
+   *  an as-published archive. */
+  sourceDiscrepancies?: Array<{ row: string; published: string; note: string }>;
 }
 
 function escapeHtml(s: string): string {
@@ -61,20 +77,24 @@ function checkRow(
   raceCount: number,
   leadCount: number,
   nameAt: number,
+  ranked: boolean,
 ): string[] {
   // Name the sailor, not the cell: a row identified by one of its own scores
   // is the least useful thing to be told when a sum fails.
   const who = row[nameAt] || row[0];
-  const races = row.slice(1 + leadCount, 1 + leadCount + raceCount);
-  const total = scoreOf(row[1 + leadCount + raceCount]);
-  const nett = scoreOf(row[2 + leadCount + raceCount]);
+  const rank = ranked ? 1 : 0;
+  const races = row.slice(rank + leadCount, rank + leadCount + raceCount);
+  const total = scoreOf(row[rank + leadCount + raceCount]);
+  const nett = scoreOf(row[rank + 1 + leadCount + raceCount]);
   const problems: string[] = [];
 
-  const sum = races.reduce((n, c) => n + scoreOf(c), 0);
+  // A cell can be blank where the boat did not sail that race at all and the
+  // publisher left it empty rather than scoring it.
+  const sum = races.filter((c) => c.trim()).reduce((n, c) => n + scoreOf(c), 0);
   if (Math.abs(sum - total) > 0.001) {
     problems.push(`${who}: race cells sum to ${sum}, published Total is ${total}`);
   }
-  const discards = races.filter(isDiscard);
+  const discards = races.filter((c) => c.trim()).filter(isDiscard);
   if (discards.length > 1) {
     problems.push(`${who}: ${discards.length} cells are parenthesised; expected one discard`);
   }
@@ -93,14 +113,14 @@ function checkRow(
 function render(t: Transcription): string {
   const leadKeys = t.leadColumns.map((c) => c.key);
   const cols = [
-    'rank',
+    ...(t.ranked ? ['rank'] : []),
     ...leadKeys,
     ...t.raceHeaders.map(() => 'race'),
     'total',
     'nett',
   ];
   const headers = [
-    'Rank',
+    ...(t.ranked ? ['Rank'] : []),
     ...t.leadColumns.map((c) => c.label),
     ...t.raceHeaders,
     'Total',
@@ -120,12 +140,13 @@ function render(t: Transcription): string {
 <title>${escapeHtml(t.title)}</title>
 <!--
   GENERATED — NOT A CAPTURE. Built by \`pnpm transcriptions\` from
-  ${escapeHtml(basename(DIR))}/, which is a hand reading of a photograph
-  published by ${escapeHtml(t.source.publisher)}:
-    ${escapeHtml(t.source.article)}
-  The image itself is kept verbatim at ${escapeHtml(t.source.image)}.
-  Every row below was checked against its own published Total and Nett
-  before this file was written. Do not edit it by hand; edit the JSON.
+  ${escapeHtml(basename(DIR))}/, a ${escapeHtml(t.source.reading)} copy of a
+  table published by ${escapeHtml(t.source.publisher)}:
+    ${escapeHtml(t.source.url)}
+  The source itself is kept verbatim at ${escapeHtml(t.source.capture)}.
+  Every row below was checked against its own published Total and Nett before
+  this file was written, except those the JSON declares as source
+  discrepancies. Do not edit it by hand; edit the JSON.
 -->
 </head>
 <body>
@@ -155,27 +176,63 @@ function main(): void {
   const problems: string[] = [];
   let written = 0;
   let checked = 0;
+  let discrepancies = 0;
 
   for (const file of files) {
     const t = JSON.parse(readFileSync(join(DIR, file), 'utf8')) as Transcription;
     const leadCount = t.leadColumns.length;
     const raceCount = t.raceHeaders.length;
-    const width = 1 + leadCount + raceCount + 2;
-    // The rank cell is column 0, so a lead column sits one to the right of its
-    // own index. Falls back to the rank when no column names a helm.
+    // A rank cell, when the table has one, sits at column 0 and shifts every
+    // lead column one to the right.
+    const rankCols = t.ranked ? 1 : 0;
+    const width = rankCols + leadCount + raceCount + 2;
     const helmIndex = t.leadColumns.findIndex((c) => c.key === 'helmname');
-    const nameAt = helmIndex >= 0 ? helmIndex + 1 : 0;
+    const nameAt = helmIndex >= 0 ? helmIndex + rankCols : 0;
+
+    // Declared source errors: a row here is published contradicting itself,
+    // and is carried verbatim. Every one must be spent — a declaration for a
+    // row that now reconciles means the reading changed under it, and is as
+    // much a problem as an undeclared mismatch.
+    const declared = new Map(
+      (t.sourceDiscrepancies ?? []).map((d) => [d.row, d]),
+    );
+    const spent = new Set<string>();
 
     t.rows.forEach((row, i) => {
       if (row.length !== width) {
         problems.push(`${file} row ${i + 1}: ${row.length} cells, expected ${width}`);
         return;
       }
-      problems.push(
-        ...checkRow(row, raceCount, leadCount, nameAt).map((p) => `${file}: ${p}`),
-      );
+      const who = row[nameAt] || row[0];
+      const found = checkRow(row, raceCount, leadCount, nameAt, t.ranked);
+      const declaration = declared.get(who);
+      if (found.length > 0 && declaration) {
+        spent.add(who);
+        // The declaration has to name the same arithmetic the check found, or
+        // it is covering for something nobody looked at.
+        for (const f of found) {
+          if (!f.includes(declaration.published)) {
+            problems.push(
+              `${file}: ${who} is declared as "${declaration.published}", ` +
+                `but the check says "${f}"`,
+            );
+          }
+        }
+      } else {
+        problems.push(...found.map((p) => `${file}: ${p}`));
+      }
       checked++;
     });
+
+    for (const [who] of declared) {
+      if (!spent.has(who)) {
+        problems.push(
+          `${file}: ${who} is declared a source discrepancy but reconciles — ` +
+            `remove the declaration or check the reading`,
+        );
+      }
+    }
+    discrepancies += declared.size;
 
     if (problems.length === 0) {
       writeFileSync(join(DIR, file.replace(/\.json$/, '.html')), render(t));
@@ -191,7 +248,11 @@ function main(): void {
   }
   console.log(
     `${written} transcription${written === 1 ? '' : 's'} -> ${DIR}/*.html\n` +
-      `  ${checked} rows reconcile against their published Total and Nett`,
+      `  ${checked - discrepancies} of ${checked} rows reconcile against their ` +
+      `published Total and Nett` +
+      (discrepancies > 0
+        ? `\n  ${discrepancies} carried verbatim as declared source discrepancies`
+        : ''),
   );
 }
 

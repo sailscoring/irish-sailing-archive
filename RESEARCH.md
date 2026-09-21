@@ -79,10 +79,15 @@ rendered to [`WINNERS.md`](WINNERS.md). No route to a published page — it is
 names against years, not a scored series — but it is the only consolidated
 copy and its source page is gone.
 
-**2021 Junior: straightforward.** The results table in `junior-2021.html` is
-the same shape as the modern events — R1–R8, a medal race, Tot and Net — so it
-transcribes exactly like the 2023 event, with the same arithmetic check
-proving every row (CLARIFICATIONS §8).
+**2021 Junior: done, but not as cleanly as this note first claimed.** The
+table is the same shape as the modern events — R1–R8, a medal race, Tot and
+Net — and being HTML it extracts rather than needing to be read by eye. But
+it publishes no rank column, its Nett column is out of order for the bottom
+six boats, and **five of its sixteen rows contradict their own arithmetic**.
+All five are carried verbatim and declared; no places are published. See
+CLARIFICATIONS §10. (An earlier draft of this file said it "transcribes
+exactly like the 2023 event", which was written after reading the top of the
+table and not the bottom of it.)
 
 **2018 and 2019, senior and junior: not straightforward.** These were sailed
 as flights plus a repêchage plus a final, and published as several small

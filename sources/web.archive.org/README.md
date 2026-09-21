@@ -9,7 +9,8 @@ flag so they are the original bytes rather than the Wayback replay wrapper.
 |---|---|---|
 | `junior-2018.html` | 2020-05-02 | `/Racing/All-Ireland-Sailing-Championships/2018-All-Ireland-Junior-Championships` |
 | `junior-2019.html` | 2020-05-02 | `…/2019-All-Ireland-Junior-Championships` |
-| `junior-2021.html` | 2022-01-17 | `…/All-Ireland-Junior-Championships` |
+| `junior-2021-10-01.html` | 2021-10-01 | `…/All-Ireland-Junior-Championships` — **headed 2021**, and the one to use for that event |
+| `junior-2021.html` | 2022-01-17 | `…/All-Ireland-Junior-Championships` — same tables, but headed 2022 |
 | `junior-2022.html` | 2022-07-06 | `…/All-Ireland-Junior-Championships` |
 | `senior-2018.html` | 2019-07-16 | `…/2018-All-Ireland-Championships` |
 | `senior-2019.html` | 2020-05-02 | `…/2019-All-Ireland-Sailing-Championships` |

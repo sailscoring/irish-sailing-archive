@@ -267,6 +267,63 @@ None of the five changed a slug. A slug is a public URL and seeds the
 identity's UUIDv5, so it never moves when a display name is corrected — which
 is why `cora-naughton-zpy6` is the URL of a page headed *Cora McNaughton*.
 
+## 10. The 2021 table publishes no places, and contradicts itself five times
+
+The 2021 All Ireland Junior Championships were sailed at Schull on 25–26
+September and published by Irish Sailing as an HTML table on their own event
+page. That page is gone from the live site; it survives as an Internet Archive
+snapshot, captured at `sources/web.archive.org/junior-2021-10-01.html`.
+
+This one is **extracted, not hand-read** — the figures are the page's own
+cells, copied programmatically, so unlike the 2023 event (§8) there is no
+misreading risk. What it has instead is a source that does not add up.
+
+**No places are published.** The table has no rank column, and its own Nett
+column is not in order for the bottom six boats. The archive therefore
+publishes the rows in their published order and ranks nobody, which the app
+already understands — a section may legitimately rank no one. Numbering the
+rows would assert an order Irish Sailing's own figures contradict.
+
+**Five rows contradict themselves**, and are carried verbatim:
+
+| Boat | What the page publishes |
+|---|---|
+| Jessica Greer | discard marked on R8 (DNF 17), but the Nett implies the medal race (DNS 22) was dropped |
+| Conor Galligan | the parenthesised cell is the medal race (20), but the Nett implies R3 (16) was dropped |
+| Caoilinn Geraghty-McDonnell | Nett is Total **plus** 17, not minus a discard |
+| Oisin Pierce | as above |
+| Julie O'Neill | as above |
+
+The last three share a pattern: a boat that missed the medal race, given a 17
+in the Nett without the Total being restated. The first two are a disagreement
+between which cell is marked as the discard and which one the arithmetic drops.
+
+**They are not corrected here.** Adjusting them would be re-scoring, which is
+the one thing an as-published archive must not do (ADR-010). Each is declared
+in the transcription with its own figures, so `pnpm transcriptions` still
+fails on a *misreading* while letting a *source* error through — the check
+stays sharp, and the repo states exactly what is wrong.
+
+This was not a page caught mid-edit. Every snapshot from 2021-10-01 to
+2022-07-06 carries the identical table, so it stood in that state for the nine
+months until the page was deleted.
+
+**Open:** the same question as 2023 — does Irish Sailing or the Schull scorer
+have the file this table was typed from? And, as with 2023, the published page
+cannot say any of this until app
+[#628](https://github.com/sailscoring/sailscoring/issues/628) lands.
+
+### What 2021 settles
+
+Caoilinn Geraghty-McDonnell now appears in four events (2021, 2023, 2024,
+2025), and 2021 publishes her full hyphenated surname. That settles §9's one
+remaining display-name doubt: three of the four carry the full surname and
+only 2025 shortens it. She helmed in 2021 with Rian Geraghty-McDonnell
+crewing.
+
+Russell Bolger, who won the 2023 Junior, crewed for Des Turvey in 2021 — an
+arc that only exists because crew are sailors in their own right.
+
 ## Still to decide
 
 Events in Sailwave's root folder that are Irish Sailing's but not yet listed

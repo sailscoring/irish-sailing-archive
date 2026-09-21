@@ -126,13 +126,19 @@ delete of the orphaned row), not a rename.
 
 ## Status
 
-**Three events ingested**, all the Junior Champions' Cup:
+**Four events ingested**:
 
-| Season | Source | |
-|---|---|--:|
-| [2023](https://app.sailscoring.ie/p/irishsailing/2023/junior-champions-cup) | **transcribed** from a published photograph (§8) | 15 boats, 9 races |
-| [2024](https://app.sailscoring.ie/p/irishsailing/2024/junior-champions-cup) | Sailwave capture, standings only | 16 boats, 8 races |
-| [2025](https://app.sailscoring.ie/p/irishsailing/2025/junior-champions-cup) | Sailwave capture, with race tables | 16 boats, 7 races |
+| Season | Event | Source | |
+|---|---|---|--:|
+| [2021](https://app.sailscoring.ie/p/irishsailing/2021/all-ireland-junior-championships) | All Ireland Junior Championships | **extracted** from Irish Sailing's own page, since deleted (§10) | 16 boats, 9 races |
+| [2023](https://app.sailscoring.ie/p/irishsailing/2023/junior-champions-cup) | Junior Champions' Cup | **hand-read** from a published photograph (§8) | 15 boats, 9 races |
+| [2024](https://app.sailscoring.ie/p/irishsailing/2024/junior-champions-cup) | Junior Champions' Cup | Sailwave capture, standings only | 16 boats, 8 races |
+| [2025](https://app.sailscoring.ie/p/irishsailing/2025/junior-champions-cup) | Junior Champions' Cup | Sailwave capture, with race tables | 16 boats, 7 races |
+
+The 2021 event predates the Champions' Cup name — it is the same continuous
+championship under its older title ([RESEARCH.md](RESEARCH.md)). It publishes
+no places and five of its rows contradict their own arithmetic; both are
+carried as published ([CLARIFICATIONS §10](CLARIFICATIONS.md)).
 
 Note the workspace slug is **`irishsailing`**, with no hyphen, while this
 repo and its series keys are `irish-sailing-…`. The slug is the `/p/` segment
@@ -148,9 +154,9 @@ reads like a credentials problem and isn't.
 - ✅ **Event dates for 2024 and 2025.** 2025 states its own in the capture;
    2024 is dated from Irish Sailing's Sailing Instructions (CLARIFICATIONS §2).
    2023 has none — nobody published them.
-- ✅ **The identity manifest** — 94 rows resolved to **77 sailors**, every row
-   manifest-pinned and nothing left to the ingest's auto-pass. Fifteen appear
-   in more than one event.
+- ✅ **The identity manifest** — 126 rows resolved to **101 sailors**, every
+   row manifest-pinned and nothing left to the ingest's auto-pass. Twenty-two
+   appear in more than one event; Caoilinn Geraghty-McDonnell is in all four.
 - ✅ **Crew count as sailors** (app
    [#348](https://github.com/sailscoring/sailscoring/issues/348)) — every boat
    in all three events names a crew, so reading the helm field alone would
@@ -163,11 +169,12 @@ reads like a credentials problem and isn't.
 - ⬜ **The rest of the corpus** — the 2025 Dinghy Champions' Cup and the 2021
    and 2024 Youth Nationals are in Sailwave's root folder, each needing a
    naming and a which-upload-is-current decision first.
-- ⬜ **The older All-Ireland events** (2018–2021, senior and junior). Their
+- ⬜ **The older All-Ireland events** (2018 and 2019, senior and junior; 2021
+   senior). Their
    pages are gone from `sailing.ie` and survive only on the Internet Archive,
-   captured here. 2021 Junior transcribes like 2023; 2018 and 2019 were sailed
-   as flights and a repêchage, which the as-published model has no shape for.
-   [RESEARCH.md](RESEARCH.md) has the detail.
+   captured here. 2018 and 2019 were sailed as flights and a repêchage, which
+   the as-published model has no shape for. [RESEARCH.md](RESEARCH.md) has the
+   detail.
 - ✅ **The All-Ireland roll of honour**, 1947–2021 ([WINNERS.md](WINNERS.md)).
    No route to a published page — it is names against years, not a scored
    series — but its source page no longer exists, so the repo is the copy.

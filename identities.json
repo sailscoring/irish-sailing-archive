@@ -1,6 +1,7 @@
 {
   "version": 1,
   "series": {
+    "irish-sailing-2021-all-ireland-junior-championships": "7a36c59f-f71a-505c-b5f0-2dc0a8a11fdf",
     "irish-sailing-2023-junior-champions-cup": "7b553857-88a6-59cb-8c41-56ef8afdb602",
     "irish-sailing-2024-junior-champions-cup": "fa3100ba-36ea-5404-981c-fef0bf1fe338",
     "irish-sailing-2025-junior-champions-cup": "aed1c85c-c3bd-5b19-ba7d-4da8b94769d1"
@@ -48,6 +49,30 @@
         [
           "irish-sailing-2025-junior-champions-cup",
           "14"
+        ]
+      ]
+    },
+    {
+      "slug": "alex-leech-de5h",
+      "name": "Alex Leech",
+      "club": "Lough Ree YC",
+      "members": [
+        [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "11",
+          "crew"
+        ]
+      ]
+    },
+    {
+      "slug": "andrew-conan-wjuk",
+      "name": "Andrew Conan",
+      "club": "Royal Irish YC",
+      "members": [
+        [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "19",
+          "crew"
         ]
       ]
     },
@@ -104,10 +129,37 @@
       ]
     },
     {
+      "slug": "ben-graf-29wg",
+      "name": "Ben Graf",
+      "club": "Lough Ree YC",
+      "members": [
+        [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "11"
+        ]
+      ]
+    },
+    {
+      "slug": "ben-o-shaughnessy-ngup",
+      "name": "Ben O'Shaughnessy",
+      "club": "Royal Cork YC",
+      "members": [
+        [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "14",
+          "crew"
+        ]
+      ]
+    },
+    {
       "slug": "bobby-driscoll-kvqg",
       "name": "Bobby Driscoll",
       "club": "Ballyholme YC/RNIYC",
       "members": [
+        [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "23"
+        ],
         [
           "irish-sailing-2024-junior-champions-cup",
           "1"
@@ -119,6 +171,10 @@
       "name": "Caoilinn Geraghty-McDonnell",
       "club": "RStGYC",
       "members": [
+        [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "7"
+        ],
         [
           "irish-sailing-2023-junior-champions-cup",
           "1",
@@ -134,7 +190,7 @@
           "4"
         ]
       ],
-      "note": "Crewed for Megan O'Sullivan in 2023 and for Riona McMorrow Moriarty in 2024, helmed in 2025. Confirmed one sailor. The fuller form is the display name, and 2023 backs that up: two of the three pages carry the full surname and only 2025 shortens it. The 2023 page writes it unhyphenated, which the name key folds away."
+      "note": "Helmed in 2021 (with Rian Geraghty-McDonnell crewing), crewed for Megan O'Sullivan in 2023 and for Riona McMorrow Moriarty in 2024, helmed again in 2025. Confirmed one sailor. The fuller form is settled: three of the four published spellings carry the full surname — 2021 hyphenated, 2023 unhyphenated, 2024 hyphenated — and only 2025 shortens it."
     },
     {
       "slug": "charlie-keating-wj5w",
@@ -184,6 +240,17 @@
       ]
     },
     {
+      "slug": "conor-galligan-w3va",
+      "name": "Conor Galligan",
+      "club": "National YC",
+      "members": [
+        [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "13"
+        ]
+      ]
+    },
+    {
       "slug": "cora-naughton-zpy6",
       "name": "Cora McNaughton",
       "club": "Blessington SC",
@@ -220,6 +287,18 @@
       ]
     },
     {
+      "slug": "dan-sheriff-4kdd",
+      "name": "Dan Sheriff",
+      "club": "Ballyholme YC",
+      "members": [
+        [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "9",
+          "crew"
+        ]
+      ]
+    },
+    {
       "slug": "daniel-copithorne-cswk",
       "name": "Daniel Copithorne",
       "club": "Schulll Harbour SC/RCYC",
@@ -234,6 +313,17 @@
         ]
       ],
       "note": "Schull, helming both years. The 2024 page drops the second i; the same page drops it from Lucy Copithorne too, so it is one scorer's spelling, not two families. Confirmed one sailor."
+    },
+    {
+      "slug": "daniel-palmer-n44n",
+      "name": "Daniel Palmer",
+      "club": "Ballyholme YC",
+      "members": [
+        [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "9"
+        ]
+      ]
     },
     {
       "slug": "dara-jenkins-v43f",
@@ -259,6 +349,17 @@
       ]
     },
     {
+      "slug": "des-turvey-yj6k",
+      "name": "Des Turvey",
+      "club": "Howth YC",
+      "members": [
+        [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "12"
+        ]
+      ]
+    },
+    {
       "slug": "dylan-o-sullivan-tscd",
       "name": "Dylan O'Sullivan",
       "club": "Royal Cork YC",
@@ -266,6 +367,29 @@
         [
           "irish-sailing-2025-junior-champions-cup",
           "16"
+        ]
+      ]
+    },
+    {
+      "slug": "ella-o-neill-trh3",
+      "name": "Ella O'Neill",
+      "club": "Royal Cork YC",
+      "members": [
+        [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "8",
+          "crew"
+        ]
+      ]
+    },
+    {
+      "slug": "ellie-cunnane-hjr2",
+      "name": "Ellie Cunnane",
+      "club": "Tralee Bay SC",
+      "members": [
+        [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "15"
         ]
       ]
     },
@@ -343,6 +467,11 @@
       "name": "Fionn Daly",
       "club": "RCYC",
       "members": [
+        [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "20",
+          "crew"
+        ],
         [
           "irish-sailing-2024-junior-champions-cup",
           "11",
@@ -443,6 +572,11 @@
       "club": "BYC/RNIYC",
       "members": [
         [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "23",
+          "crew"
+        ],
+        [
           "irish-sailing-2023-junior-champions-cup",
           "7",
           "crew"
@@ -479,6 +613,28 @@
       ]
     },
     {
+      "slug": "jacques-murphy-86jm",
+      "name": "Jacques Murphy",
+      "club": "Royal St. George YC",
+      "members": [
+        [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "17"
+        ]
+      ]
+    },
+    {
+      "slug": "james-dwyer-f29m",
+      "name": "James Dwyer",
+      "club": "Royal Cork YC",
+      "members": [
+        [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "21"
+        ]
+      ]
+    },
+    {
       "slug": "james-eadie-y5mj",
       "name": "James Eadie",
       "club": "Donaghdee SC/Ballyholme YC",
@@ -496,8 +652,23 @@
       "club": "SYC",
       "members": [
         [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "10"
+        ],
+        [
           "irish-sailing-2023-junior-champions-cup",
           "11"
+        ]
+      ]
+    },
+    {
+      "slug": "jonathan-o-shaughnessy-h3wq",
+      "name": "Jonathan O'Shaughnessy",
+      "club": "Royal Cork YC",
+      "members": [
+        [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "14"
         ]
       ]
     },
@@ -514,6 +685,29 @@
         [
           "irish-sailing-2024-junior-champions-cup",
           "9"
+        ]
+      ]
+    },
+    {
+      "slug": "josh-lloyd-qc8n",
+      "name": "Josh Lloyd",
+      "club": "Blessington SC",
+      "members": [
+        [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "16",
+          "crew"
+        ]
+      ]
+    },
+    {
+      "slug": "julie-o-neill-87ks",
+      "name": "Julie O'Neill",
+      "club": "Royal Cork YC",
+      "members": [
+        [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "8"
         ]
       ]
     },
@@ -665,6 +859,11 @@
       "club": "SYC",
       "members": [
         [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "10",
+          "crew"
+        ],
+        [
           "irish-sailing-2023-junior-champions-cup",
           "11",
           "crew"
@@ -703,6 +902,17 @@
         [
           "irish-sailing-2023-junior-champions-cup",
           "9"
+        ]
+      ]
+    },
+    {
+      "slug": "max-goodbody-64cb",
+      "name": "Max Goodbody",
+      "club": "Royal Irish YC",
+      "members": [
+        [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "19"
         ]
       ]
     },
@@ -770,10 +980,38 @@
       ]
     },
     {
+      "slug": "nathan-van-steenberg-ysjp",
+      "name": "Nathan Van Steenberg",
+      "club": "Howth YC",
+      "members": [
+        [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "22",
+          "crew"
+        ]
+      ]
+    },
+    {
+      "slug": "oisin-mc-sweeney-kpp6",
+      "name": "Oisin Mc Sweeney",
+      "club": "Royal Cork YC",
+      "members": [
+        [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "21",
+          "crew"
+        ]
+      ]
+    },
+    {
       "slug": "oisin-pierce-mh8x",
       "name": "Oisin Pierce",
       "club": "RCYC",
       "members": [
+        [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "20"
+        ],
         [
           "irish-sailing-2024-junior-champions-cup",
           "11"
@@ -826,6 +1064,18 @@
       ]
     },
     {
+      "slug": "rian-geraghty-mcdonnell-gmd5",
+      "name": "Rian Geraghty-McDonnell",
+      "club": "Royal St. George YC",
+      "members": [
+        [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "7",
+          "crew"
+        ]
+      ]
+    },
+    {
       "slug": "riona-mcmorrow-moriarty-jtv9",
       "name": "Riona McMorrow Moriarty",
       "club": "TBSC",
@@ -837,6 +1087,17 @@
         [
           "irish-sailing-2024-junior-champions-cup",
           "16"
+        ]
+      ]
+    },
+    {
+      "slug": "rocco-wright-382m",
+      "name": "Rocco Wright",
+      "club": "Howth YC",
+      "members": [
+        [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "22"
         ]
       ]
     },
@@ -863,6 +1124,11 @@
       "club": "RStGYC",
       "members": [
         [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "12",
+          "crew"
+        ],
+        [
           "irish-sailing-2023-junior-champions-cup",
           "10"
         ]
@@ -883,6 +1149,17 @@
         ]
       ],
       "note": "Schull, helming both years with Lucy Copithorne crewing. The 2024 page drops the apostrophe. Confirmed one sailor."
+    },
+    {
+      "slug": "sam-street-e4ct",
+      "name": "Sam Street",
+      "club": "Blessington SC",
+      "members": [
+        [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "16"
+        ]
+      ]
     },
     {
       "slug": "sarah-whyte-jhjy",
@@ -916,6 +1193,18 @@
         [
           "irish-sailing-2025-junior-champions-cup",
           "23"
+        ]
+      ]
+    },
+    {
+      "slug": "seth-walker-us3d",
+      "name": "Seth Walker",
+      "club": "Royal St. George YC",
+      "members": [
+        [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "17",
+          "crew"
         ]
       ]
     },
@@ -954,6 +1243,18 @@
       ]
     },
     {
+      "slug": "sophie-kilmartin-729r",
+      "name": "Sophie Kilmartin",
+      "club": "Tralee Bay SC",
+      "members": [
+        [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "15",
+          "crew"
+        ]
+      ]
+    },
+    {
       "slug": "tom-driscoll-mh8u",
       "name": "Tom Driscoll",
       "club": "BYC/RNIYC",
@@ -972,6 +1273,18 @@
         [
           "irish-sailing-2025-junior-champions-cup",
           "13"
+        ]
+      ]
+    },
+    {
+      "slug": "zack-harden-o-connor-daf2",
+      "name": "Zack Harden O'Connor",
+      "club": "National YC",
+      "members": [
+        [
+          "irish-sailing-2021-all-ireland-junior-championships",
+          "13",
+          "crew"
         ]
       ]
     }
