@@ -115,6 +115,7 @@ function buildSeries(event: ArchiveEvent) {
     ...(event.endDate ? { endDate: event.endDate } : {}),
     ...(event.eventUrl ? { eventUrl: event.eventUrl } : {}),
     ...(event.venueUrl ? { venueUrl: event.venueUrl } : {}),
+    ...(event.seriesNote ? { seriesNote: event.seriesNote } : {}),
     source: 'sailwave' as const,
     fleets,
     // A multi-fleet event's pages sit in an interior folder; pin its display

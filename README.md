@@ -165,8 +165,17 @@ reads like a credentials problem and isn't.
 - ⬜ **Ask for the real 2023 file.** 2024 and 2025 were both published to
    sailwave.com by the same operation, so a `.blw` or unpublished HTML for
    2023 very likely exists. It would retire the transcription (§8).
-- ⬜ **The 2023 page cannot say it is a transcription.** As-published ingest
-   documents carry no note field, so it renders like the captures beside it.
+- ✅ **Both recovered events say what they are.** The 2023 and 2021 pages
+   carry a note (app
+   [#628](https://github.com/sailscoring/sailscoring/issues/628)) recording
+   that no results page was published, where the figures came from, and — for
+   2021 — that the source publishes no places and contradicts itself five
+   times.
+- ✅ **2023 is dated to the year** (app
+   [#629](https://github.com/sailscoring/sailscoring/issues/629)). Nobody
+   published the racing days and the week straddles October and November, so
+   `2023` is what is known and what is recorded. Enough for the competitor
+   index to file it and a career arc to label it.
 - ⬜ **The rest of the corpus** — the 2025 Dinghy Champions' Cup and the 2021
    and 2024 Youth Nationals are in Sailwave's root folder, each needing a
    naming and a which-upload-is-current decision first.

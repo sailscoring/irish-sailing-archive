@@ -250,17 +250,24 @@ Consequences, all deliberate:
   is a second unreliable candidate rather than an answer. The racing was on or
   before 3 November 2023; nobody has published which days.
 
+  The series is therefore dated **`2023`** — a bare year, which app
+  [#629](https://github.com/sailscoring/sailscoring/issues/629) made
+  expressible. Not the month: the week ended Friday 3 November and the
+  championship was sailed at the start of it, which straddles October. A year
+  is what is known, so a year is what is recorded — and it is enough for the
+  competitor index to file those sailors under 2023 and for a career arc to
+  label the event instead of showing a dash.
+
 **Still worth asking** for the original `.blw`: it would carry the dates and
 the clubs together, which neither surviving source does. It is no longer
 needed to trust the figures.
 
-**Also open:** the published page does not say any of this. As-published
-ingest documents carry no note field, so `/p/irishsailing/2023/...` renders
-looking exactly like the two verbatim captures beside it. That is the wrong
-way round — a transcription should say what it is, and link to the photograph
-it came from. Filed as app
-[#628](https://github.com/sailscoring/sailscoring/issues/628); when it lands,
-this series gets a `seriesNote` saying so.
+**The page now says so.** App
+[#628](https://github.com/sailscoring/sailscoring/issues/628) added
+`seriesNote` to an ingest document, so `/p/irishsailing/2023/...` carries a
+note saying no results page was published, that these standings were
+transcribed from a photograph, linking the report, and recording that the
+figures were checked against Irish Sailing's own pushed data.
 
 ## 9. What 2023 settled about names
 
@@ -327,10 +334,13 @@ This was not a page caught mid-edit. Every snapshot from 2021-10-01 to
 2022-07-06 carries the identical table, so it stood in that state for the nine
 months until the page was deleted.
 
+**The page says this too**, since #628: its note records that Irish Sailing's
+own page has been removed, links the Internet Archive copy the results are
+recovered from, and states plainly that no places are published and that five
+rows disagree with their own arithmetic.
+
 **Open:** the same question as 2023 — does Irish Sailing or the Schull scorer
-have the file this table was typed from? And, as with 2023, the published page
-cannot say any of this until app
-[#628](https://github.com/sailscoring/sailscoring/issues/628) lands.
+have the file this table was typed from?
 
 ### What 2021 settles
 

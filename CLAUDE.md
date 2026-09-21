@@ -47,7 +47,12 @@ The README has it in full.
    reproducibility. Do not edit it, do not transcode it (see rule 4), and do
    not relicense it — see README "Licensing".
 
-3. **Only real published data, and transcribe only as a last resort.** If
+3. **Only real published data, and transcribe only as a last resort.** An
+   event recovered rather than captured carries a `seriesNote` in
+   `sources/events.json` saying so on its own published page — that is not
+   optional politeness, it is the difference between an archive and a claim.
+   Dates go in at the precision a source actually states: `YYYY`, `YYYY-MM` or
+   `YYYY-MM-DD`, never finer than the evidence. If
    something is missing, leave it missing — do not fabricate, interpolate, or
    guess. One event (2023) was never published as a page at all and had to be
    read by hand off a photograph; that is the exception, it lives in

@@ -43,14 +43,19 @@ export interface ArchiveEvent {
    *  emit so a re-capture that moves under us is noticed rather than
    *  absorbed. */
   title: string;
-  /** Event dates. Stated only where a published source states them; see
-   *  `datesFrom`. */
+  /** Event dates, at whatever precision a published source actually states:
+   *  a full day, a month, or a year alone. Never finer than the evidence. */
   startDate?: string;
   endDate?: string;
   /** Which published text the dates were read from. */
   datesFrom?: string;
   eventUrl?: string;
   venueUrl?: string;
+  /** A note rendered on every page of this event's publication: what the
+   *  figures cannot say for themselves. Only an event that needs one has one —
+   *  a verbatim capture of a published results page says everything by being
+   *  what it is. */
+  seriesNote?: string;
 }
 
 export function readEvents(): ArchiveEvent[] {

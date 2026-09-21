@@ -12,6 +12,7 @@
       "startDate": "2021-09-25",
       "endDate": "2021-09-26",
       "eventUrl": "https://www.sailing.ie/Racing/Events-Calendar/Junior-Champions-Cup",
+      "seriesNote": "Irish Sailing published these results on their own event page, which has since been removed from sailing.ie; they are recovered from the [Internet Archive's copy](http://web.archive.org/web/20211001162409/https://www.sailing.ie/Racing/All-Ireland-Sailing-Championships/All-Ireland-Junior-Championships) of 1 October 2021.\n\nThat table publishes no finishing places, and its own Nett column is not in order for the last six boats, so no places are shown here. Five rows also disagree with their own arithmetic — three give a Nett higher than the Total, and two mark one race as the discard while the Nett drops another. They are reproduced exactly as published; correcting them would mean re-scoring the event.",
       "source": "sailwave",
       "fleets": [
         {
@@ -28,7 +29,9 @@
       "publishedSlug": "2023",
       "name": "Irish Sailing Junior Champions' Cup 2023",
       "venue": "Fastnet Marine & Outdoor Education Centre, Schull, Co Cork",
+      "startDate": "2023",
       "eventUrl": "https://www.sailing.ie/Racing/Events-Calendar/Junior-Champions-Cup",
+      "seriesNote": "Irish Sailing published no results page for this event. These standings were transcribed by hand from a photograph of the scorer's table in [afloat.ie's report](https://afloat.ie/sail/youth-sailing/item/61117-russell-bolger-of-dun-laoghaire-clear-winner-at-junior-national-championship-at-schull) of 5 November 2023, and then checked against the data Irish Sailing pushed to their own results app: every figure agrees.\n\nThe event was postponed from September and sailed at Schull in the week ending 3 November 2023. No source states which days it was raced on.",
       "source": "sailwave",
       "fleets": [
         {
