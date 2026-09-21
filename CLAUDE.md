@@ -26,6 +26,7 @@ pnpm install
 pnpm capture              # fetch every event in sources/events.json
 pnpm capture --refresh    # re-fetch everything
 pnpm transcriptions       # hand-read tables → Sailwave-shaped HTML
+pnpm winners              # winners.json → WINNERS.md
 pnpm emit-as-published    # events + captures → as-published.config.json
 pnpm identities           # generated documents → identities.json
 pnpm typecheck
@@ -99,7 +100,14 @@ The README has it in full.
    title is a change to review, not one to absorb on the way past. Work out
    what changed before updating the recorded title.
 
-9. **Record every judgement call in [`CLARIFICATIONS.md`](CLARIFICATIONS.md).**
+9. **Date every table before believing it.** Irish Sailing reused undated
+   URLs (`…/All-Ireland-Junior-Championships`) to promote the next event while
+   the last one's results sat on the same page, so an Internet Archive
+   snapshot of one can carry three years at once — a 2022 heading, the 2021
+   results, and the 2019 results further down. Check any table against
+   `WINNERS.md` before attributing it to a year. See `RESEARCH.md`.
+
+10. **Record every judgement call in [`CLARIFICATIONS.md`](CLARIFICATIONS.md).**
    Two pages of the same event were enough to disagree about its name, its
    venue and whether its results are final, so assume the next page will
    disagree about something too. State what is verified, mark what is

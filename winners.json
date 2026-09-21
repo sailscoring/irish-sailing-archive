@@ -1,0 +1,477 @@
+{
+  "_comment": [
+    "The All-Ireland roll of honour, 1947-2021, as Irish Sailing published it.",
+    "Transcribed from the table on their All-Ireland Past Winners page, captured",
+    "at sources/web.archive.org/past-winners.html. Cell values are verbatim,",
+    "including 'no event' and 'no longer presented'; an empty cell is recorded as",
+    "null, meaning the published table said nothing there.",
+    "",
+    "Nothing here is inferred. If a year is wrong, it is wrong in the source, and",
+    "that is a finding for RESEARCH.md rather than a value to correct here."
+  ],
+  "source": {
+    "url": "https://www.sailing.ie/Racing/All-Ireland-Sailing-Championships/All-Ireland-Past-Winners",
+    "wayback": "http://web.archive.org/web/20220706012849/https://www.sailing.ie/Racing/All-Ireland-Sailing-Championships/All-Ireland-Past-Winners",
+    "snapshot": "2022-07-06",
+    "capture": "sources/web.archive.org/past-winners.html",
+    "publisher": "Irish Sailing",
+    "columns": [
+      "Year",
+      "Senior Winner",
+      "Junior Winner",
+      "Junior First Girl"
+    ]
+  },
+  "winners": [
+    {
+      "year": 2021,
+      "senior": "Ger Owens",
+      "junior": "Rocco Wright",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 2020,
+      "senior": "no event",
+      "junior": "no event",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 2019,
+      "senior": "Michael O'Connor",
+      "junior": "Chris Bateman",
+      "juniorFirstGirl": "no longer presented"
+    },
+    {
+      "year": 2018,
+      "senior": "Peter Kennedy",
+      "junior": "Atlee Kohl",
+      "juniorFirstGirl": "Alana Coakley"
+    },
+    {
+      "year": 2017,
+      "senior": "Fionn Lyden",
+      "junior": "Micheal O'Suilleabhain",
+      "juniorFirstGirl": "Leah Rickard"
+    },
+    {
+      "year": 2016,
+      "senior": "Alex Barry",
+      "junior": "Johnny Durcan",
+      "juniorFirstGirl": "Kate Lyttle"
+    },
+    {
+      "year": 2015,
+      "senior": "Anthony O'Leary",
+      "junior": "Peter McCann",
+      "juniorFirstGirl": "Clare Gorman"
+    },
+    {
+      "year": 2014,
+      "senior": "Anthony O'Leary",
+      "junior": "Harry Durkan",
+      "juniorFirstGirl": "Gemma McDowell"
+    },
+    {
+      "year": 2013,
+      "senior": "Ben Duncan",
+      "junior": "Séafra Guilfoyle",
+      "juniorFirstGirl": "Megan Parker"
+    },
+    {
+      "year": 2012,
+      "senior": "Peter O'Leary",
+      "junior": "Fionn Lyden",
+      "juniorFirstGirl": "Aisling Keller"
+    },
+    {
+      "year": 2011,
+      "senior": "George Kenefick",
+      "junior": null,
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 2010,
+      "senior": "Nicholas O'Leary",
+      "junior": "Philip Doran",
+      "juniorFirstGirl": "Sophie Murphy"
+    },
+    {
+      "year": 2009,
+      "senior": "Nicholas O'Leary",
+      "junior": "Matthew O'Dowd",
+      "juniorFirstGirl": "Diana Kissane"
+    },
+    {
+      "year": 2008,
+      "senior": "Nicholas O'Leary",
+      "junior": "Philip Doran",
+      "juniorFirstGirl": "Tiffany Brien"
+    },
+    {
+      "year": 2007,
+      "senior": "Stefan Hyde",
+      "junior": "Chris Penney",
+      "juniorFirstGirl": "Annalise Murphy"
+    },
+    {
+      "year": 2006,
+      "senior": "Peter O'Leary",
+      "junior": "George Kenefick",
+      "juniorFirstGirl": "Rachel Guy"
+    },
+    {
+      "year": 2005,
+      "senior": "David Crosbie",
+      "junior": "Fionn Jenkinson",
+      "juniorFirstGirl": "Lisa Tate"
+    },
+    {
+      "year": 2004,
+      "senior": "Tom Fitzpatrick",
+      "junior": "Katie Tingle",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 2003,
+      "senior": "Neil Hegarty",
+      "junior": "Erica Tate & Lorraine Stallard",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 2002,
+      "senior": "Conor Walsh",
+      "junior": "Robert Collins & Kenny Keogh",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 2001,
+      "senior": "Feargal Kinsella",
+      "junior": "Peter Bayly & Niall Cowman",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 2000,
+      "senior": "Gerald Owens",
+      "junior": "Peter O'Leary",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1999,
+      "senior": "Mark Mansfield",
+      "junior": "Nicholas O'Leary",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1998,
+      "senior": "Tom Fitzpatrick",
+      "junior": "Gerald Owens",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1997,
+      "senior": "Tom Fitzpatrick",
+      "junior": "Neil Spain",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1996,
+      "senior": "Laura Dillon",
+      "junior": "Gerald Owens",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1995,
+      "senior": "Ruan O'Tiarnaigh",
+      "junior": "Laura Dillon",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1994,
+      "senior": "Tom Fitzpatrick",
+      "junior": "Evan Dolan",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1993,
+      "senior": "Sean Craig",
+      "junior": "Evan Dolan",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1992,
+      "senior": "John Ross Murphy",
+      "junior": "Tom Fitzpatrick",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1991,
+      "senior": "Mark Lyttle",
+      "junior": "Tom Fitzpatrick",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1990,
+      "senior": "Mark Mansfield",
+      "junior": "Robert Eason",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1989,
+      "senior": "Marshall King",
+      "junior": "Conal Casey",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1988,
+      "senior": "John Murtagh",
+      "junior": "J McWilliam",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1987,
+      "senior": "Mark Lyttle",
+      "junior": "Dan O'Grady",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1986,
+      "senior": "Mark Lyttle",
+      "junior": "T McWilliam",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1985,
+      "senior": "Paul Rowan",
+      "junior": "Nicky Timon",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1984,
+      "senior": "Paul Rowan",
+      "junior": "Niall Alexander",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1983,
+      "senior": "Brian Craig",
+      "junior": "Niall Alexander",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1982,
+      "senior": "David Cummins",
+      "junior": "Michael Stavely",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1981,
+      "senior": "David Cummins",
+      "junior": "Mark Lyttle",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1980,
+      "senior": "T W Whisker",
+      "junior": "Justin Maguire",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1979,
+      "senior": "Chris Arrowsmith",
+      "junior": "Justin Maguire",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1978,
+      "senior": "Wiclif McCready",
+      "junior": "John Gilmore",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1977,
+      "senior": "Wiclif McCready",
+      "junior": "Mark O'Hare",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1976,
+      "senior": "Adrian Bell",
+      "junior": "Bryan Maguire",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1975,
+      "senior": "David Gay",
+      "junior": "Joseph English",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1974,
+      "senior": "Peter Duffy",
+      "junior": "Alan McFarlane",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1973,
+      "senior": "Owen Delany",
+      "junior": "David McFarlane",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1972,
+      "senior": "Harold Cudmore",
+      "junior": "Robert Bleakney",
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1971,
+      "senior": "Adrian Bell",
+      "junior": null,
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1970,
+      "senior": "Robert Dix",
+      "junior": null,
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1969,
+      "senior": "Maurice R Butler",
+      "junior": null,
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1968,
+      "senior": "Vincent Delany",
+      "junior": null,
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1967,
+      "senior": "T C M Morris",
+      "junior": null,
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1966,
+      "senior": "John F Russell",
+      "junior": null,
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1965,
+      "senior": "James Nixon",
+      "junior": null,
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1964,
+      "senior": "J K O'Reilly",
+      "junior": null,
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1963,
+      "senior": "Owen Delany",
+      "junior": null,
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1962,
+      "senior": "G M Sargent",
+      "junior": null,
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1961,
+      "senior": "M C Walsh",
+      "junior": null,
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1960,
+      "senior": "J Clayton Love Jnr",
+      "junior": null,
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1959,
+      "senior": "J O McCleary",
+      "junior": null,
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1958,
+      "senior": "J K O'Reilly",
+      "junior": null,
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1957,
+      "senior": "J Somers Payne",
+      "junior": null,
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1956,
+      "senior": "J Somers Payne",
+      "junior": null,
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1955,
+      "senior": "J Clayton Love Jnr",
+      "junior": null,
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1954,
+      "senior": "Neville D Maguire",
+      "junior": null,
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1953,
+      "senior": "Johnny Hooper",
+      "junior": null,
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1952,
+      "senior": "Neville D Maguire",
+      "junior": null,
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1951,
+      "senior": "Richard Uren",
+      "junior": null,
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1950,
+      "senior": "Ted Crosbie",
+      "junior": null,
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1949,
+      "senior": "Richard Uren",
+      "junior": null,
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1948,
+      "senior": "John Weaving",
+      "junior": null,
+      "juniorFirstGirl": null
+    },
+    {
+      "year": 1947,
+      "senior": "R Douglas Heard",
+      "junior": null,
+      "juniorFirstGirl": null
+    }
+  ]
+}

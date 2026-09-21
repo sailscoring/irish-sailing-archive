@@ -16,6 +16,9 @@ structured ranks plus verbatim display cells — and **never re-scored**.
 
 > 📋 **[CLARIFICATIONS.md](CLARIFICATIONS.md)** — the judgement calls the
 > corpus forced, and the open questions for Irish Sailing.
+> 🔎 **[RESEARCH.md](RESEARCH.md)** — where the older events' results survive,
+> and the trap in the undated pages that hold them.
+> 🏆 **[WINNERS.md](WINNERS.md)** — the All-Ireland roll of honour, 1947–2021.
 
 ## What's here
 
@@ -24,6 +27,10 @@ sources/
   events.json                the curated event list (the only hand-written input)
   sailwave.com/results/      captured Sailwave pages (verbatim)
   afloat.ie/                 a published results photograph (verbatim)
+  web.archive.org/           Irish Sailing's own event pages, since deleted
+                             from the live site (verbatim)
+winners.json                 the All-Ireland roll of honour, 1947–2021
+WINNERS.md                   ...rendered  (`pnpm winners`)
 transcriptions/              hand-read tables for results nobody published as
                              a page, plus the HTML built from them (§8)
 scripts/
@@ -32,6 +39,7 @@ scripts/
   build-transcriptions.ts    transcription → HTML     (`pnpm transcriptions`)
   emit-as-published-config.ts events + captures → ingest config
   bootstrap-identities.ts    rows → identities.json   (`pnpm identities`)
+  build-winners.ts           winners.json → WINNERS.md (`pnpm winners`)
 identity-curation.json       hand-maintained input to `pnpm identities`
 identities.json              the competitor-identity manifest (committed)
 as-published.config.json     generated ingest config (committed; the input to
@@ -47,6 +55,7 @@ pnpm install
 pnpm capture              # fetch every event listed in sources/events.json
 pnpm capture --refresh    # re-fetch, for an event still running
 pnpm transcriptions       # hand-read tables → Sailwave-shaped HTML
+pnpm winners              # winners.json → WINNERS.md
 pnpm emit-as-published    # events + captures → as-published.config.json
 pnpm identities           # generated documents → identities.json
 pnpm typecheck
@@ -154,6 +163,14 @@ reads like a credentials problem and isn't.
 - ⬜ **The rest of the corpus** — the 2025 Dinghy Champions' Cup and the 2021
    and 2024 Youth Nationals are in Sailwave's root folder, each needing a
    naming and a which-upload-is-current decision first.
+- ⬜ **The older All-Ireland events** (2018–2021, senior and junior). Their
+   pages are gone from `sailing.ie` and survive only on the Internet Archive,
+   captured here. 2021 Junior transcribes like 2023; 2018 and 2019 were sailed
+   as flights and a repêchage, which the as-published model has no shape for.
+   [RESEARCH.md](RESEARCH.md) has the detail.
+- ✅ **The All-Ireland roll of honour**, 1947–2021 ([WINNERS.md](WINNERS.md)).
+   No route to a published page — it is names against years, not a scored
+   series — but its source page no longer exists, so the repo is the copy.
 
 ## The live 2026 event
 

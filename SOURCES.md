@@ -82,6 +82,18 @@ this archive whose numbers were typed rather than captured. It is marked as
 such wherever it appears, and CLARIFICATIONS §8 says what that costs and how
 the arithmetic check limits the damage.
 
+## `web.archive.org` — Irish Sailing's deleted event pages
+
+The All-Ireland Championships pages (senior and junior, 2018–2021) and the
+roll of honour are gone from the live `sailing.ie`. They survive as Internet
+Archive snapshots, captured under `sources/web.archive.org/` with the `id_`
+flag so they are the original bytes rather than the Wayback replay wrapper.
+
+Three of those URLs carry no year, and a snapshot of one mixes a forthcoming
+event's heading with a previous event's results — in one case with a third
+year's results still on the page. **[`RESEARCH.md`](RESEARCH.md) before
+use.**
+
 ## Capture etiquette
 
 sailwave.com is a small public server. `pnpm capture` is single-threaded with
