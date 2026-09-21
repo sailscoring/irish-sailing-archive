@@ -27,6 +27,7 @@ sources/
   events.json                the curated event list (the only hand-written input)
   sailwave.com/results/      captured Sailwave pages (verbatim)
   afloat.ie/                 a published results photograph (verbatim)
+  irishsailinglive.ie/       Irish Sailing's own results API (verbatim)
   web.archive.org/           Irish Sailing's own event pages, since deleted
                              from the live site (verbatim)
 winners.json                 the All-Ireland roll of honour, 1947–2021
@@ -131,7 +132,7 @@ delete of the orphaned row), not a rename.
 | Season | Event | Source | |
 |---|---|---|--:|
 | [2021](https://app.sailscoring.ie/p/irishsailing/2021/all-ireland-junior-championships) | All Ireland Junior Championships | **extracted** from Irish Sailing's own page, since deleted (§10) | 16 boats, 9 races |
-| [2023](https://app.sailscoring.ie/p/irishsailing/2023/junior-champions-cup) | Junior Champions' Cup | **hand-read** from a published photograph (§8) | 15 boats, 9 races |
+| [2023](https://app.sailscoring.ie/p/irishsailing/2023/junior-champions-cup) | Junior Champions' Cup | **hand-read** from a published photograph, since verified against Irish Sailing Live (§8) | 15 boats, 9 races |
 | [2024](https://app.sailscoring.ie/p/irishsailing/2024/junior-champions-cup) | Junior Champions' Cup | Sailwave capture, standings only | 16 boats, 8 races |
 | [2025](https://app.sailscoring.ie/p/irishsailing/2025/junior-champions-cup) | Junior Champions' Cup | Sailwave capture, with race tables | 16 boats, 7 races |
 

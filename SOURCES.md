@@ -94,6 +94,17 @@ event's heading with a previous event's results — in one case with a third
 year's results still on the page. **[`RESEARCH.md`](RESEARCH.md) before
 use.**
 
+## `irishsailinglive.ie` — Irish Sailing's own results database
+
+A fourth kind of source: not a published page but a JSON API, holding what
+scorers pushed from Sailwave and HalSail. It is the only place the **2023**
+Junior Champions' Cup's structured data survives, and checking the hand
+transcription against it found no differences at all.
+
+Captures and the endpoint list are in
+[`sources/irishsailinglive.ie/`](sources/irishsailinglive.ie/); what it does
+and does not hold is in [`RESEARCH.md`](RESEARCH.md).
+
 ## Capture etiquette
 
 sailwave.com is a small public server. `pnpm capture` is single-threaded with

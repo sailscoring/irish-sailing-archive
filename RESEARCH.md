@@ -103,14 +103,52 @@ two of them near-duplicate uploads of the ILCA 6 results). Each needs a
 which-upload-is-current decision, and the six-page 2021 event needs deciding
 whether it is one series of six fleets or six series.
 
+## Irish Sailing Live
+
+[irishsailinglive.ie](https://www.irishsailinglive.ie/) is Irish Sailing's own
+results app, and a **fourth kind of source** for this archive: not a published
+page but a database. Scorers push to it from Sailwave or HalSail, and the push
+lands as structured per-race data — points, finish places, discard flags,
+scoring codes — plus standings, readable through a public JSON API that needs
+no sign-in. Nothing renders server-side, so none of it is indexable and none of
+it turns up in a search; the API is the only way in. See
+[`sources/irishsailinglive.ie/`](sources/irishsailinglive.ie/) for the
+endpoints and the captures.
+
+It is thin and uneven. Across all 54 events it files, 2002–2026, Irish
+Sailing's own championships appear only from a 2023–24 trial period; from 2025
+the organisation went back to publishing on sailwave.com and HalSail.
+
+**What it gave us.** The only Junior Champions' Cup on it is **2023** — the one
+event in this archive with no published results page, which we had transcribed
+by hand from a photograph. Checked cell by cell, all fifteen rows agree
+exactly (CLARIFICATIONS §8). That is the transcription independently verified,
+and it is why §8 now reads as a method note rather than a worry.
+
+**What it did not.** No 2021, 2024 or 2025 Junior event. No club names for the
+2023 event either — `clubName` is null throughout — so the photograph remains
+the published source, carrying Class and Club, while the API proves the
+numbers. And its dates are whatever the plugin sent: it files 2023 as a single
+day, 1 December, for an event whose results were in print on 5 November.
+
+**What to take from it next**, as and when:
+
+| Event | Id | Source | Notes |
+|---|--:|---|---|
+| Irish Sailing Youth Nationals 2023 | 849 | Sailwave push | Howth YC, 13–16 April |
+| Irish Sailing Youth Nationals 2024 | 847 | Sailwave push | Royal Cork YC |
+
+The senior Champions' Cup is **not** on it for any year; those results live on
+sailwave.com (dinghy) and HalSail's public pages (keelboat), and the older
+All-Ireland years only on the Internet Archive pages above.
+
 ## Ask Irish Sailing
 
 Most of what is missing is cheaper to ask for than to reconstruct:
 
-- **The 2023 Junior file.** 2024 and 2025 were both published to sailwave.com
-  by the same operation; 2023 was postponed to November and, it seems, scored
-  without ever being uploaded. A `.blw` or an unpublished HTML would retire
-  this repo's one transcription (CLARIFICATIONS §8).
+- **The 2023 Junior file.** Its figures are now verified against Irish Sailing
+  Live, so this is no longer about trusting them — but the `.blw` would carry
+  the **dates and the clubs together**, which neither surviving source does.
 - **Event dates.** 2023 has none published at all, and the older events' dates
   live only in Notices of Race that are themselves only on the Archive.
 - **Post-2021 winners.** The roll of honour stops at 2021; 2022 onwards is

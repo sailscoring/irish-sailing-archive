@@ -205,18 +205,32 @@ So the fifteen rows in `transcriptions/2023-junior-champions-cup.json` were
 read off a 767-pixel JPEG by eye, and `pnpm transcriptions` renders them into
 the Sailwave shape the app's parser reads.
 
-**What makes that defensible is that the table checks itself.** A standings
-table carries its own checksum: every row's race cells must sum to its
-published Total, and Total less the parenthesised discard must equal its
-published Nett. A single misread digit breaks both. The build verifies all
-fifteen rows before writing anything and fails if one does not reconcile, so
-a transcription that cannot be proved right never reaches a results page.
-This is not theoretical — a first reading of the low-resolution image had
-four sail numbers wrong, and the sums are what caught them.
+**It has since been verified against a second source, and is exactly right.**
+Irish Sailing pushed this event to their own results app, Irish Sailing Live,
+from Sailwave during their 2023 trial of it — the structured data the scorer's
+own file produced. Checked cell by cell against it (captured at
+`sources/irishsailinglive.ie/event-47-junior-champions-cup-2023.json`), all
+fifteen rows agree **exactly**: every race score, every discard marking, every
+scoring code, both sail numbers, Total and Nett. Zero differences.
 
-What the check cannot verify is the text: names, clubs and classes have no
-arithmetic. Those were read from a 3× upscale, and a misspelling there would
-be invisible.
+That removes the doubt this section was written around. What follows is kept
+because the method is what made the reading trustworthy before a second source
+turned up, and the next transcription will not necessarily get one.
+
+**The table checks itself.** A standings table carries its own checksum: every
+row's race cells must sum to its published Total, and Total less the
+parenthesised discard must equal its published Nett. A single misread digit
+breaks both. The build verifies all fifteen rows before writing anything and
+fails if one does not reconcile. This is not theoretical — a first reading of
+the low-resolution image had four sail numbers wrong, and the sums caught
+every one. The independent check has now confirmed the corrected reading.
+
+What arithmetic could not verify is the text — names, clubs and classes have
+no checksum — and that is where the second source stops short too: Irish
+Sailing Live carries no club at all for this event (`clubName` is null for
+every competitor) and no class. So the photograph stays the published source
+here, with two columns the API does not have, and the API is what proves the
+numbers.
 
 Consequences, all deliberate:
 
@@ -229,11 +243,16 @@ Consequences, all deliberate:
   the days raced, and the SIs for 2023 are not online. Same rule as everywhere
   else: a date nobody published does not go in.
 
-**Open:** ask Irish Sailing, or the Schull scorer, for the original. 2024 and
-2025 were both published to sailwave.com by the same operation, so a `.blw` or
-an unpublished HTML for 2023 very likely exists — the event was postponed to
-November and probably scored without ever being uploaded. A real capture would
-retire this whole apparatus for 2023, and it is one email.
+  Irish Sailing Live files it as a single day, **1 December 2023**, which is
+  demonstrably wrong: the results were published in a news article on
+  5 November 2023, and nine races were not sailed in one day. Dates on that
+  platform are whatever the scorer's plugin sent and are never checked, so it
+  is a second unreliable candidate rather than an answer. The racing was on or
+  before 3 November 2023; nobody has published which days.
+
+**Still worth asking** for the original `.blw`: it would carry the dates and
+the clubs together, which neither surviving source does. It is no longer
+needed to trust the figures.
 
 **Also open:** the published page does not say any of this. As-published
 ingest documents carry no note field, so `/p/irishsailing/2023/...` renders
